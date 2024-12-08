@@ -26,6 +26,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -36,16 +37,17 @@
   </head>
 
   <body class="home">
-    <main class="container">
+    <main class="container_1">
       <nav class="navi">
         <div>
-          <img
+          <h1 class="temp">AK Beauty &amp Tattoo</h1>
+          <!-- <img
             class="navi__logo"
             src="./assets/img/logo.webp"
             alt=""
             width="300"
             height="50"
-          />
+          /> -->
         </div>
         <ul class="navi__list">
           <li class="navi__list__item"><a href="#">sluzby</a></li>
@@ -54,8 +56,33 @@
           <li class="navi__list__item"><a href="#">kontakt</a></li>
         </ul>
       </nav>
-      <section class="tattoo"><h2>tattoo</h2></section>
-      <section class="beauty"><h2>beauty</h2></section>
+
+      <section class="hero">
+        <article class="tattoo">
+          <div class="content">
+            <h2>Tetování – umění, které zůstane s vámi navždy</h2>
+            <h3>
+              Tetování je víc než jen kresba na kůži. Je to příběh, který si
+              ponesete celý život.
+            </h3>
+          </div>
+
+          <div class="image"></div>
+        </article>
+
+        <article class="beauty">
+          <div class="image"></div>
+
+          <div class="content">
+            <h2>Beauty – umění, které vás dělá jedinečnými</h2>
+            <h3>
+              Krása není jen o vzhledu. Je to vyjádření vaší individuality a
+              sebevědomí. Je to cesta, jak zvýraznit to, co vás činí
+              výjimečnými, a oslavit svou jedinečnost.
+            </h3>
+          </div>
+        </article>
+      </section>
     </main>
 
     <!-- bootstrap CDN -->

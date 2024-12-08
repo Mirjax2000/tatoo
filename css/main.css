@@ -1,8 +1,12 @@
 /*   --- root css --- */
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");
 :root {
+  --container: 90rem;
   --font-size: 100%;
-  --H1: 0.9375rem;
-  --H2: 0.875rem;
+  --font-color: #bcbcbc;
+  --H1: 3rem;
+  --H2: 3rem;
+  --H3: 1.5rem;
   --H5: 0.9375rem;
   --H6: 0.8125rem;
 
@@ -30,22 +34,44 @@
 
 .home {
   background-color: var(--clr-body);
+  color: var(--font-color);
 }
 
-.container {
-  border: 1px solid black;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.536);
+.container_1 {
+  /* border: 1px solid black; */
+  /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.536); */
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .navi {
+  position: sticky;
+  max-width: 1024px;
+  width: 100%;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  min-height: 50px;
+  min-height: 60px;
   background-color: var(--nav-bckground);
   box-shadow: 1px 1px 5px black;
+  margin-bottom: 10px;
+  z-index: 100;
 }
+
+.temp {
+  font-family: "Corinthia", cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: normal;
+  padding-inline: 0.5em;
+  position: absolute;
+  top: 0px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.334);
+}
+
 .navi__list {
   display: flex;
   justify-content: flex-end;
@@ -63,6 +89,83 @@
   transition: border-bottom 0.25s;
   border-color: var(--nav-bckground);
 }
+
 .navi__list__item a:hover {
   border-bottom: 1px solid var(--clr-detail);
+}
+
+.hero {
+  height: calc(100dvh - 70px);
+  outline: 1px solid red;
+  padding-inline: 3em;
+}
+
+.tattoo,
+.beauty {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tattoo {
+  background-color: #2b2d31;
+}
+.beauty {
+  background-color: #a2a2a2;
+  color: #2c2c2c;
+}
+
+.content,
+.image {
+  flex-basis: 50%;
+  outline: 1px solid red;
+  margin: 1em;
+}
+
+.content{
+  /* background-color: #2c2c2c; */
+  padding-inline: 2em;
+  border-radius: 10px;
+  box-shadow:1px 1px 7px rgba(0, 0, 0, 0.162);
+}
+
+.content h2 {
+  font-size: var(--H2);
+  margin-bottom: 0.5em;
+}
+
+.content h3 {
+  font-size: var(--H3);
+}
+
+.image {
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.tattoo .image {
+  background-image: url("/assets/img/IMG_9335.jpeg");
+}
+
+.beauty .image {
+  background-image: url("/assets/img/IMG_9337.jpeg");
+}
+
+.image:hover {
+  opacity: 1;
+}
+
+* {
+  outline: none !important;
+}
+
+/* mediaqueries */
+@media screen and (max-height: 800px) {
+  .hero > * {
+    min-height: calc(100dvh - 70px);
+  }
 }
