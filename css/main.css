@@ -1,0 +1,68 @@
+/*   --- root css --- */
+:root {
+  --font-size: 100%;
+  --H1: 0.9375rem;
+  --H2: 0.875rem;
+  --H5: 0.9375rem;
+  --H6: 0.8125rem;
+
+  --nav-bckground: #2c2c2c;
+  --nav-font_size: 1.1rem;
+
+  --par: 1rem;
+  --clr-body: #303030;
+  --clr-nav: #2b2d31;
+  --clr-tatoo: #ffffff;
+  --clr-beauty: #ffffff;
+  --clr-detail: #989c32;
+  --clr-H1: #ffffff;
+  --clr-H2: #ffffff;
+  --clr-H3: #ffffff;
+  --clr-H4: #ffffff;
+  --clr-p: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.home {
+  background-color: var(--clr-body);
+}
+
+.container {
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.536);
+}
+
+.navi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  min-height: 50px;
+  background-color: var(--nav-bckground);
+  box-shadow: 1px 1px 5px black;
+}
+.navi__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navi__list__item {
+  padding-inline: 1em;
+}
+
+.navi__list__item a {
+  color: var(--clr-p);
+  font-size: var(--nav-size);
+  padding-inline: 0.5em;
+  transition: border-bottom 0.25s;
+  border-color: var(--nav-bckground);
+}
+.navi__list__item a:hover {
+  border-bottom: 1px solid var(--clr-detail);
+}

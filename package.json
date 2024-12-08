@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Miroslav Viktorin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "htmlhint": "^1.1.4"
+  }
 }
