@@ -3,29 +3,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
-  --container: 90rem;
+  --container: 64rem;
   --font-size: 100%;
-  --font-color: #bcbcbc;
-  --H1: 3rem;
+  --H1: 4rem;
   --H2: 3rem;
   --H3: 1.1rem;
-  --H5: 0.9375rem;
-  --H6: 0.8125rem;
-
-  --nav-bckground: #2c2c2c;
+  --p: 1rem;
+  --a:1rem
   --nav-font_size: 1.1rem;
 
-  --par: 1rem;
+  --clr-font: #bcbcbc;
   --clr-body: #303030;
-  --clr-nav: #2b2d31;
-  --clr-tatoo: #ffffff;
-  --clr-hero__beauty: #ffffff;
-  --clr-detail: #989c32;
-  --clr-H1: #ffffff;
-  --clr-H2: #ffffff;
-  --clr-H3: #ffffff;
-  --clr-H4: #ffffff;
-  --clr-p: #ffffff;
+  --clr-primary: #2b2d31;
+  --clr-second: #8f8d8d;
+  --clr-detail: gold;
 }
 
 *,
@@ -34,23 +25,30 @@
   box-sizing: border-box;
 }
 
+.section--hero {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.488);
+  margin-bottom: 10px;
+}
+
 .home {
   background-color: var(--clr-body);
-  color: var(--font-color);
+  font-size: var(--font-size);
+  color: var(--clr-font);
 }
 
 .page__container {
-  /* border: 1px solid black; */
-  /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.536); */
-  max-width: 1024px;
+  position: relative;
+  max-width: var(--container);
+  min-width: 18.75rem;
   width: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
 /* globalni nastaveni fontu */
+h1,
 h2,
-h3 {
+h3,
+p,a {
   font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
@@ -67,33 +65,36 @@ h3 {
   font-family: "Open Sans", sans-serif;
 }
 
+p,a {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--p);
+}
+
 .navbar {
   position: sticky;
-  max-width: 1024px;
+  max-width: inherit;
+  min-width: inherit;
   width: 100%;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
-  background-color: var(--nav-bckground);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.488);
+  background: var(--clr-primary);
+  background: linear-gradient(138deg, #222222 0%, var(--clr-primary) 60%);
+  box-shadow: 1px 1px 4px #222222;
   margin-bottom: 10px;
   z-index: 100;
 }
 
 .navbar__brand {
   font-family: "Corinthia", cursive;
-  font-size: 4rem;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: -3px;
+  font-size: var(--H1);
+  font-weight: 300;
   padding-inline: 0.5em;
   position: absolute;
   top: 0px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.654);
-  font-optical-sizing: auto;
-  font-variation-settings: "wdth" 100;
+  left: 0px;
 }
 
 .navbar__list {
@@ -102,37 +103,84 @@ h3 {
   align-items: center;
 }
 
-.navbar__item {
-  padding-inline: 1em;
-}
-
-.navbar__item a {
+.navbar__item a,
+.gallery__list a {
   color: var(--clr-p);
   font-size: var(--nav-size);
   padding-inline: 0.5em;
-  transition: border-bottom 0.25s;
-  border-color: var(--nav-bckground);
+  margin-inline: 1em;
+  transition: border-bottom 0.25s linear, color 0.25s linear;
+  border-bottom: 1px solid transparent;
 }
 
-.navbar__item a:hover {
+.navbar__item a:hover,
+.gallery__list a:hover,
+.gallery__list .active {
   border-bottom: 1px solid var(--clr-detail);
+  color: white;
+}
+
+.navbar__item--sluzby {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar__item--sluzby:hover .sluzby__frame {
+  display: block;
+}
+
+.navbar__item--sluzby .sluzby__frame {
+  display: none;
+  position: absolute;
+  top: 0.7em;
+  left: -1.5em;
+  padding: 1em;
+  background-color: transparent;
+  z-index: 200;
+}
+
+.navbar__item--sluzby .sluzby__frame li {
+  padding: 0.3em 0;
+}
+
+.navbar__item--sluzby .sluzby__frame .wrapper {
+  padding: 0.5em;
+  background-color: var(--clr-primary);
+  border-radius: 0.3125rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.752);
 }
 
 .section--hero {
-  height: calc(100dvh - 70px);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.488);
-  background-color: var(--nav-bckground);
+  background-color: var(--clr-primary);
+}
+
+.section--hero > * {
+  height: calc(50dvh - 2.1875rem);
+  min-height: 29rem;
 }
 
 .hero__tattoo,
 .hero__beauty {
-  height: 50%;
   display: flex;
   justify-content: space-between;
 }
 
+.hero__tattoo {
+  background: var(--clr-primary);
+  background: linear-gradient(
+    138deg,
+    rgb(34, 34, 34) 0%,
+    var(--clr-primary) 60%
+  );
+}
+
 .hero__beauty {
-  background-color: #a2a2a2;
+  background: var(--clr-second);
+  background: linear-gradient(
+    138deg,
+    rgba(143, 141, 141, 1) 0%,
+    var(--clr-second) 60%
+  );
   color: #2c2c2c;
 }
 
@@ -142,17 +190,16 @@ h3 {
   margin: 1.5em;
 }
 
-.section__content h2 {
+h2 {
   margin-bottom: 0.3em;
 }
 
-.section__content h3 {
+h3 {
   margin-bottom: 0.7em;
   line-height: 1.5;
 }
 
 .section__image {
-  background-color: #505050;
   opacity: 0.9;
   border-radius: 5px;
   background-repeat: no-repeat;
@@ -185,19 +232,24 @@ h3 {
   top: 0;
   left: 0;
   right: 0;
-  height: 90%;
-  padding: 2em;
+  height: calc(90% + 1px);
+  padding: 1em 2em;
 }
+
+.image__about-list .image__about-item {
+  margin-bottom: 0.5em;
+}
+
+.image__about-list .image__about-item p {
+  line-height: 1.5;
+}
+
 .image__about.about--top,
 .image__about.about--bottom {
   display: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-}
-
-.section__image .image__about h3 {
-  line-height: 1.5;
-  color: var(--font-color);
+  color: var(--clr-font);
 }
 
 .section__image .image__banner:hover {
@@ -218,10 +270,77 @@ h3 {
   background-image: url("/assets/img/IMG_9337_big.jpeg");
 } */
 
+.section__gallery {
+  height: calc(100dvh - 70px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.gallery__container {
+  width: 100%;
+  max-width: inherit;
+  min-width: inherit;
+}
+.gallery__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  min-height: 60px;
+  background: var(--clr-primary);
+  background: linear-gradient(138deg, #222222 0%, var(--clr-primary) 60%);
+  box-shadow: 1px 1px 4px #222222;
+  margin-bottom: 10px;
+}
+
+.gallery__header h2 {
+  margin: 0;
+  padding-inline: 0.5em;
+}
+
+.gallery__list {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper__tatoo{
+  padding: 1em;
+}
+.wrapper__tatoo .tattoo__list{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-wrap: wrap;
+width: 100%;
+gap:10px
+}
+.wrapper__tatoo .tattoo__list .tattoo__list--item{
+  flex-basis: 25%;
+  outline: 1px solid rgb(0, 102, 255);
+
+}
+
+.wrapper__tatoo .tattoo__list .tattoo__list--item:hover{
+  transform: scale(1.1);
+}
+
+
+.wrapper__tatoo .gallery__content{
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+
+
+.wrapper__beauty{
+  display: none;
+}
+
 /* mediaqueries */
-@media screen and (max-height: 850px) {
+@media screen and (max-height: 62rem) {
   .section--hero > * {
     height: calc(100dvh - 70px);
-    min-height: 450px;
+    min-height: 38.75rem;
   }
 }
