@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <title>AK Tatoo Beauty</title>
@@ -26,16 +26,15 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
 
-    <!-- 
-        <link rel="shortcut icon" href="./favicon-32x32.png" type="section__image/x-icon" />
-        <link rel="shortcut icon" href="./favicon-32x32.webp" type="section__image/x-icon" /> -->
+    <!-- <link rel="shortcut icon" href="./favicon-32x32.png" type="section__image/x-icon" /> -->
+    <!-- <link rel="shortcut icon" href="./favicon-32x32.webp" type="section__image/x-icon" /> -->
   </head>
 
   <body class="home">
     <main class="page__container">
       <nav class="navbar">
         <div>
-          <h1 class="navbar__brand">AK &nbspBeauty &amp Tattoo</h1>
+          <h1 class="navbar__brand">AK &nbspBeauty &amp; Tattoo</h1>
         </div>
         <ul class="navbar__list">
           <li class="navbar__item navbar__item--sluzby">
@@ -44,17 +43,21 @@
             <div class="sluzby__frame">
               <div class="wrapper">
                 <ul class="sluzby__frame--list">
-                  <li id="toTatoo"><a>Tattoo</a></li>
-                  <li id="toBeauty"><a>Beauty</a></li>
+                  <li><a class="scrollTo" data-target="tattoo">Tattoo</a></li>
+                  <li><a class="scrollTo" data-target="beauty">Beauty</a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="navbar__item"><a href="#">ceník</a></li>
-          <li class="navbar__item" id="toGallery">
-            <a href="#gallery">galerie</a>
+          <li class="navbar__item">
+            <a class="scrollTo" data-target="cenik">ceník</a>
           </li>
-          <li class="navbar__item"><a href="#">kontakt</a></li>
+          <li class="navbar__item">
+            <a class="scrollTo" data-target="gallery">galerie</a>
+          </li>
+          <li class="navbar__item">
+            <a class="scrollTo" data-target="kontakt">kontakt</a>
+          </li>
         </ul>
       </nav>
 
@@ -63,61 +66,79 @@
           <div class="section__content">
             <h2>Tattoo – umění, které zůstane s vámi navždy</h2>
             <h3>
-              Tetování je víc než jen kresba na kůži. Je to příběh, který si
-              ponesete celý život.
+              <strong>Tetování</strong>
+              je víc než jen kresba na kůži. Je to příběh, který si ponesete
+              celý život.
             </h3>
             <h3>
-              Každá linie, každý detail je otiskem momentu, emoce nebo myšlenky,
-              která má pro vás význam. Může být symbolem překonané výzvy,
-              připomínkou milované osoby, nebo vyjádřením vaší identity a
-              jedinečnosti.
+              <strong>Každá</strong>
+              linie, každý detail je otiskem momentu, emoce nebo myšlenky, která
+              má pro vás význam. Může být symbolem překonané výzvy, připomínkou
+              milované osoby, nebo vyjádřením vaší identity a jedinečnosti.
             </h3>
           </div>
 
           <div class="section__image">
-            <div class="image__banner banner--top-frame">
-              <i class="fa-solid fa-chevron-right"></i>
+            <div
+              class="image__banner banner--top-frame"
+              data-target="about--top"
+            >
+              <i class="fa-solid fa-chevron-right chevron__move"></i>
             </div>
-            <aside class="image__about about--top">
+            <aside class="image__about about--top" id="about--top">
               <h3>
                 Specializuji se na širokou škálu tetovacích stylů, abych vám
                 mohla splnit jakékoli přání:
               </h3>
+              <hr />
 
               <ul class="image__about-list">
                 <li class="image__about-item">
-                  <p>Abstraktní motivy plné emocí a originality</p>
-                </li>
-
-                <li class="image__about-item">
-                  <p>Dotwork s precizními tečkami a geometrickými vzory</p>
-                </li>
-
-                <li class="image__about-item">
-                  <p>Barevné tetování, které rozzáří každý detail</p>
-                </li>
-
-                <li class="image__about-item">
                   <p>
-                    Jemné linky, ideální pro minimalistické a elegantní motivy
-                  </p>
-                </li>
-
-                <li class="image__about-item">
-                  <p>Realistické obrazy, které vypadají jako živé</p>
-                </li>
-
-                <li class="image__about-item">
-                  <p>
-                    Úprava starších tetování – oživení barev, dodání detailů
-                    nebo úprava tvaru.
+                    <strong>Abstraktní motivy</strong> plné emocí a originality
                   </p>
                 </li>
 
                 <li class="image__about-item">
                   <p>
-                    Covers (zakrytí) – zakryji staré nebo nechtěné tetování
-                    novým motivem, který budete milovat.
+                    <strong>Dotwork</strong> s precizními tečkami a
+                    geometrickými vzory
+                  </p>
+                </li>
+
+                <li class="image__about-item">
+                  <p>
+                    <strong>Barevné tetování</strong>, které rozzáří každý
+                    detail
+                  </p>
+                </li>
+
+                <li class="image__about-item">
+                  <p>
+                    <strong>Jemné linky</strong>, ideální pro minimalistické a
+                    elegantní motivy
+                  </p>
+                </li>
+
+                <li class="image__about-item">
+                  <p>
+                    <strong>Realistické obrazy</strong>, které vypadají jako
+                    živé
+                  </p>
+                </li>
+
+                <li class="image__about-item">
+                  <p>
+                    Úprava starších tetování – <strong>oživení</strong> barev,
+                    <strong>dodání</strong> detailů nebo úprava tvaru.
+                  </p>
+                </li>
+
+                <li class="image__about-item">
+                  <p>
+                    <strong>Covers</strong>
+                    (zakrytí) – zakryji staré nebo nechtěné tetování novým
+                    motivem, který budete milovat.
                   </p>
                 </li>
               </ul>
@@ -127,10 +148,13 @@
 
         <article class="hero__beauty" id="beauty">
           <div class="section__image">
-            <div class="image__banner banner--bottom-frame">
-              <i class="fa-solid fa-chevron-right"></i>
+            <div
+              class="image__banner banner--bottom-frame"
+              data-target="about--bottom"
+            >
+              <i class="fa-solid fa-chevron-right chevron__move"></i>
             </div>
-            <aside class="image__about about--bottom">
+            <aside class="image__about about--bottom" id="about--bottom">
               <h3>
                 Prodlužování a zahušťování řas je mou specialitou. Každá
                 aplikace je přizpůsobena přesně vašim očím, aby výsledný efekt
@@ -147,13 +171,14 @@
           <div class="section__content">
             <h2>Beauty – umění, které vás dělá jedinečnými</h2>
             <h3>
-              Krása není jen o vzhledu. Je to vyjádření vaší individuality a
-              sebevědomí. Je to cesta, jak zvýraznit to, co vás činí
-              výjimečnými, a oslavit svou jedinečnost.
+              <strong>Krása</strong> není jen o vzhledu. Je to vyjádření vaší
+              individuality a sebevědomí. Je to cesta, jak zvýraznit to, co vás
+              činí výjimečnými, a oslavit svou jedinečnost.
             </h3>
             <h3>
-              Oslavovat svou krásu znamená přijmout své pravé já, své chyby i
-              své přednosti. Jde o to, najít radost v sobě samých a sdílet tuto
+              <strong>Oslavovat</strong>
+              svou krásu znamená přijmout své pravé já, své chyby i své
+              přednosti. Jde o to, najít radost v sobě samých a sdílet tuto
               radost s okolním světem. Krása není jen něco, co vidíme je to
               něco, co cítíme.
             </h3>
@@ -178,7 +203,7 @@
           </nav>
 
           <div>
-            <div class="wrapper__tatoo">
+            <div class="wrapper__tattoo">
               <ul class="tattoo__list">
                 <li class="tattoo__list--item">
                   <div class="gallery__content">
@@ -201,7 +226,7 @@
                 <li class="tattoo__list--item">
                   <div class="gallery__content">
                     <img
-                      src="./assets/img/tattoo/IMG_2211_thumb.jpeg"
+                      src="./assets/img/tattoo/IMG_2759_thumb.jpeg"
                       alt="tattoo preview"
                       width="320"
                     />
@@ -210,7 +235,7 @@
                 <li class="tattoo__list--item">
                   <div class="gallery__content">
                     <img
-                      src="./assets/img/tattoo/IMG_2759_thumb.jpeg"
+                      src="./assets/img/tattoo/IMG_2211_thumb.jpeg"
                       alt="tattoo preview"
                       width="320"
                     />
@@ -291,7 +316,7 @@
               </ul>
             </div>
             <div class="wrapper__beauty">
-              <ul>
+              <ul class="beauty__list">
                 <li class="beauty__list--item">
                   <div class="beauty__content">
                     <img

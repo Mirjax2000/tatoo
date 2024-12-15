@@ -5,40 +5,28 @@
 // -----------------
 
 $(function () {
-  const toTattoo = $("#toTatoo");
-  const toBeauty = $("#toBeauty");
-  const tattoo = $("#tattoo");
-  const beauty = $("#beauty");
+  const whereTo = $(".scrollTo");
+  const fade = $(".image__banner");
   const offset = 70;
 
-  const btm_frame = $(".image__banner.banner--bottom-frame");
-  const top_frame = $(".image__banner.banner--top-frame");
-  const btm_about = $(".about--bottom");
-  const top_about = $(".about--top");
+  whereTo.on("click", function (event) {
+    event.preventDefault();
 
-  toTattoo.on("click", function (event) {
-    event.preventDefault();
+    // Získání ID cílového elementu z atributu data-target
+    const targetId = $(this).data("target");
+    const targetElement = $(`#${targetId}`);
+
+    // Posun stránky na cílový element
     $("html, body").animate(
       {
-        scrollTop: tattoo.offset().top - offset,
-      },
-      1
-    );
-  });
-  toBeauty.on("click", function (event) {
-    event.preventDefault();
-    $("html, body").animate(
-      {
-        scrollTop: beauty.offset().top - offset,
+        scrollTop: targetElement.offset().top - offset,
       },
       1
     );
   });
 
-  btm_frame.on("click", function () {
-    btm_about.fadeToggle(300, function () {});
-  });
-  top_frame.on("click", function () {
-    top_about.fadeToggle(300, function () {});
+  fade.on("click", function () {
+    const targetId = $(this).data("target");
+    $(`#${targetId}`).fadeToggle(300);
   });
 });
