@@ -118,13 +118,6 @@ a {
   cursor: pointer;
 }
 
-.navbar__item a:hover,
-.gallery__list a:hover,
-.gallery__list .active {
-  border-bottom: 1px solid var(--clr-detail);
-  color: white;
-}
-
 .navbar__item--sluzby {
   position: relative;
   cursor: pointer;
@@ -146,6 +139,13 @@ a {
 
 .navbar__item--sluzby .sluzby__frame li {
   padding: 0.3em 0;
+}
+.navbar__list .active,
+.gallery__list .active,
+.navbar__item a:hover,
+.gallery__list a:hover {
+  border-bottom: 1px solid var(--clr-detail);
+  color: white;
 }
 
 .navbar__item--sluzby .sluzby__frame .wrapper {

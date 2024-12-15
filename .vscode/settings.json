@@ -112,7 +112,13 @@
     },
     "window.newWindowProfile": "Default",
     "terminal.explorerKind": "both",
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+        }
+    },
     "scm.inputFontFamily": "monospace",
     "editor.cursorSmoothCaretAnimation": "explicit",
     "editor.cursorWidth": 2,
