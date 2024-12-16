@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
@@ -10,60 +10,39 @@
     <meta name="keywords" content="responsive" />
     <!-- zadej jmeno autora -->
     <meta name="author" content="Miroslav Viktorin" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
-    <!-- aktivace fontawesome -->
-    <link
-      rel="stylesheet"
-      href="./assets/fontAwesome_css/fontawesome.min.css"
-    />
-    <link rel="stylesheet" href="./assets/fontAwesome_css/brands.min.css" />
-    <link rel="stylesheet" href="./assets/fontAwesome_css/solid.min.css" />
-
-    <link rel="stylesheet" href="css/normalize.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-
-    <!-- <link rel="shortcut icon" href="./favicon-32x32.png" type="section__image/x-icon" /> -->
-    <!-- <link rel="shortcut icon" href="./favicon-32x32.webp" type="section__image/x-icon" /> -->
   </head>
 
   <body class="home">
-    <main class="page__container">
+    <main class="container">
       <nav class="navbar">
         <div>
           <h1 class="navbar__brand">AK &nbspBeauty &amp; Tattoo</h1>
         </div>
-        <ul class="navbar__list">
-          <li class="navbar__item navbar__item--sluzby">
-            <a href="#" class="active">služby</a>
 
-            <div class="sluzby__frame">
-              <div class="wrapper">
-                <ul class="sluzby__frame--list">
-                  <li><a class="scrollTo" data-target="tattoo">Tattoo</a></li>
-                  <li><a class="scrollTo" data-target="beauty">Beauty</a></li>
-                </ul>
-              </div>
-            </div>
+        <ul class="navbar__list">
+          <li class="navbar__list--item">
+            <a href="./index.html" class="active">služby</a>
           </li>
-          <li class="navbar__item">
-            <a class="scrollTo" data-target="cenik">ceník</a>
+
+          <li class="navbar__list--item">
+            <a href="./cenik.html">ceník</a>
           </li>
-          <li class="navbar__item">
-            <a href="gallery.html" data-target="gallery">galerie</a>
+
+          <li class="navbar__list--item">
+            <a href="./gallery.html">galerie</a>
           </li>
-          <li class="navbar__item">
-            <a class="scrollTo" data-target="kontakt">kontakt</a>
+
+          <li class="navbar__list--item">
+            <a href="./kontakt.html">kontakt</a>
           </li>
         </ul>
       </nav>
 
-      <section class="section--hero">
-        <article class="hero__tattoo" id="tattoo">
-          <div class="section__content">
+      <section class="hero">
+        <article class="hero__tattoo">
+          <div class="hero__tattoo--content">
             <h2>Tattoo – umění, které zůstane s vámi navždy</h2>
             <h3>
               <strong>Tetování</strong>
@@ -78,63 +57,63 @@
             </h3>
           </div>
 
-          <div class="section__image">
+          <div class="hero__tattoo--image">
             <div
-              class="image__banner banner--top-frame"
+              class="image__banner image__banner--top"
               data-target="about--top"
             >
-              <i class="fa-solid fa-chevron-right chevron__move"></i>
+              <b class="marker">&gt;</b>
             </div>
             <aside class="image__about about--top" id="about--top">
               <h3>
                 Specializuji se na širokou škálu tetovacích stylů, abych vám
                 mohla splnit jakékoli přání:
               </h3>
-              <hr />
+              <hr class="break__line" />
 
-              <ul class="image__about-list">
-                <li class="image__about-item">
+              <ul class="image__about--list">
+                <li class="about__list--item">
                   <p>
                     <strong>Abstraktní motivy</strong> plné emocí a originality
                   </p>
                 </li>
 
-                <li class="image__about-item">
+                <li class="about__list--item">
                   <p>
                     <strong>Dotwork</strong> s precizními tečkami a
                     geometrickými vzory
                   </p>
                 </li>
 
-                <li class="image__about-item">
+                <li class="about__list--item">
                   <p>
                     <strong>Barevné tetování</strong>, které rozzáří každý
                     detail
                   </p>
                 </li>
 
-                <li class="image__about-item">
+                <li class="about__list--item">
                   <p>
                     <strong>Jemné linky</strong>, ideální pro minimalistické a
                     elegantní motivy
                   </p>
                 </li>
 
-                <li class="image__about-item">
+                <li class="about__list--item">
                   <p>
                     <strong>Realistické obrazy</strong>, které vypadají jako
                     živé
                   </p>
                 </li>
 
-                <li class="image__about-item">
+                <li class="about__list--item">
                   <p>
                     Úprava starších tetování – <strong>oživení</strong> barev,
                     <strong>dodání</strong> detailů nebo úprava tvaru.
                   </p>
                 </li>
 
-                <li class="image__about-item">
+                <li class="about__list--item">
                   <p>
                     <strong>Covers</strong>
                     (zakrytí) – zakryji staré nebo nechtěné tetování novým
@@ -146,13 +125,13 @@
           </div>
         </article>
 
-        <article class="hero__beauty" id="beauty">
-          <div class="section__image">
+        <article class="hero__beauty">
+          <div class="hero__beauty--image">
             <div
-              class="image__banner banner--bottom-frame"
+              class="image__banner image__banner--bottom"
               data-target="about--bottom"
             >
-              <i class="fa-solid fa-chevron-right chevron__move"></i>
+              <b class="marker">&gt;</b>
             </div>
             <aside class="image__about about--bottom" id="about--bottom">
               <h3>
@@ -168,7 +147,7 @@
             </aside>
           </div>
 
-          <div class="section__content">
+          <div class="hero__beauty--content">
             <h2>Beauty – umění, které vás dělá jedinečnými</h2>
             <h3>
               <strong>Krása</strong> není jen o vzhledu. Je to vyjádření vaší
@@ -185,8 +164,6 @@
           </div>
         </article>
       </section>
-
-
     </main>
 
     <!-- Jquery -->

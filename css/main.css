@@ -1,10 +1,206 @@
-/*   --- root css --- */
+/* --- typography --- */
+@font-face {
+  font-family: "Corinthia";
+  src:
+    url(../assets/webfonts/Font-face/Corinthia-Regular.woff2) format("woff2"),
+    url(../assets/webfonts/Font-face/Corinthia-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url(../assets/webfonts/Font-face/OpenSans-Regular.woff2) format("woff2"),
+    url(../assets/webfonts/Font-face/OpenSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-/* css variables */
+/*   --- normalize css --- */
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+hr {
+  height: 0;
+  color: inherit;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+/*  --- reset css --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+body,
+form,
+aside,
+input,
+section,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+html ::selection {
+  background-color: var(--clr-primary);
+  color: var(--clr-second);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  background-color: #505050;
+}
+
+/*   --- root css --- */
 :root {
-  --container: 64rem;
+  --container-max: 64rem;
+  --container-min: 25rem;
   --font-size: 100%;
   --H1: 4rem;
   --H2: 2.9rem;
@@ -27,16 +223,23 @@
   color: var(--clr-font);
 }
 
-hr {
+.break__line {
   border: 1px solid rgba(110, 110, 110, 0.76);
   margin-bottom: 20px;
 }
 
-.page__container {
+.marker {
+  transition: transform 0.1s;
+  text-shadow: 1px 1px 2px rgba(255, 217, 0, 0.615);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--clr-detail);
+}
+
+.container {
   position: relative;
-  max-width: var(--container);
-  min-width: 18.75rem;
-  width: 100%;
+  width: clamp(var(--container-min), 100%, var(--container-max));
   margin: 0 auto;
 }
 
@@ -69,14 +272,12 @@ p,
 a {
   font-family: "Open Sans", sans-serif;
   font-size: var(--p);
+  color: var(--clr-font);
 }
 
 .navbar {
-  position: sticky;
-  max-width: inherit;
-  min-width: inherit;
-  width: 100%;
-  top: 0;
+  width: clamp(var(--container-min), 100%, var(--container-max));
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,14 +293,13 @@ a {
   z-index: 100;
 }
 
-.navbar__brand {
+.navbar .navbar__brand {
   font-family: "Corinthia", cursive;
   font-size: var(--H1);
-  font-weight: 300;
-  padding-inline: 0.5em;
+  font-weight: 400;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0.5em;
 }
 
 .navbar__list {
@@ -156,13 +356,13 @@ a {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.752);
 }
 
-.section--hero {
+.hero {
   background-color: var(--clr-primary);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.488);
   margin-bottom: 10px;
 }
 
-.section--hero > * {
+.hero > * {
   height: calc(50dvh - 35px);
   min-height: 24rem;
 }
@@ -227,11 +427,6 @@ a {
   z-index: 100;
 }
 
-.chevron__move {
-  transition: transform 0.1s;
-  text-shadow: 1px 1px 2px rgba(255, 217, 0, 0.615);
-}
-
 .section__image .image__about {
   background-color: #000000da;
   position: absolute;
@@ -253,7 +448,7 @@ a {
   transition: box-shadow 0.1s;
   box-shadow: 1px 1px 4px #060012ea;
 }
-.section__image .image__banner:hover .chevron__move {
+.section__image .image__banner:hover .marker {
   transform: translateX(2px);
   text-shadow: 1px 1px 4px gold;
 }
