@@ -6,7 +6,7 @@
 
 $(function () {
   const whereTo = $(".scrollTo");
-  const fade = $(".image__banner");
+  const fade = $(".banner--js");
   const offset = 70;
 
   whereTo.on("click", function (event) {

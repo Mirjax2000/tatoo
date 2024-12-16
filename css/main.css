@@ -27,6 +27,7 @@ html {
   box-sizing: border-box;
 }
 
+
 hr {
   height: 0;
   color: inherit;
@@ -164,11 +165,6 @@ article {
   padding: 0;
 }
 
-html ::selection {
-  background-color: var(--clr-primary);
-  color: var(--clr-second);
-}
-
 a {
   display: inline-block;
   text-decoration: none;
@@ -238,8 +234,8 @@ img {
 }
 
 .container {
-  position: relative;
   width: clamp(var(--container-min), 100%, var(--container-max));
+  position: relative;
   margin: 0 auto;
 }
 
@@ -275,8 +271,14 @@ a {
   color: var(--clr-font);
 }
 
+.navbar,
+.navbar .navbar__brand,
+.hero__tattoo--image .image__banner--top,
+.hero__beauty--image .image__banner--bottom {
+  user-select: none;
+}
+
 .navbar {
-  width: clamp(var(--container-min), 100%, var(--container-max));
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -300,6 +302,7 @@ a {
   position: absolute;
   top: 0;
   left: 0.5em;
+  cursor: default;
 }
 
 .navbar__list {
@@ -308,8 +311,7 @@ a {
   align-items: center;
 }
 
-.navbar__item a,
-.gallery__list a {
+.navbar__list--item a {
   padding-inline: 0.5em;
   margin-inline: 1em;
   transition:
@@ -319,58 +321,22 @@ a {
   cursor: pointer;
 }
 
-.navbar__item--sluzby {
-  position: relative;
-  cursor: pointer;
-}
-
-.navbar__item--sluzby:hover .sluzby__frame {
-  display: block;
-}
-
-.navbar__item--sluzby .sluzby__frame {
-  display: none;
-  position: absolute;
-  top: 0.7em;
-  left: -1.5em;
-  padding: 1em;
-  background-color: transparent;
-  z-index: 200;
-}
-
-.navbar__item--sluzby .sluzby__frame li {
-  padding: 0.3em 0;
-}
-.navbar__list .active,
-.gallery__list .active,
-.navbar__item a:hover,
-.gallery__list a:hover {
+.navbar__list--item .active,
+.navbar__list--item a:hover {
   border-bottom: 1px solid var(--clr-detail);
   color: white;
 }
 
-.navbar__item--sluzby .sluzby__frame .wrapper {
-  padding: 0.5em;
-  background-color: var(--clr-primary);
-  border-radius: 0.3125rem;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.752);
-}
-
 .hero {
-  background-color: var(--clr-primary);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.488);
-  margin-bottom: 10px;
-}
-
-.hero > * {
-  height: calc(50dvh - 35px);
-  min-height: 24rem;
 }
 
 .hero__tattoo,
 .hero__beauty {
   display: flex;
   justify-content: space-between;
+  height: calc(50dvh - 35px);
+  min-height: 24rem;
 }
 
 .hero__tattoo {
@@ -392,13 +358,16 @@ a {
   color: #2c2c2c;
 }
 
-.section__content,
-.section__image {
+.hero__tattoo--content,
+.hero__beauty--content,
+.hero__tattoo--image,
+.hero__beauty--image {
   flex-basis: 50%;
   margin: 1.5em;
 }
 
-.section__image {
+.hero__tattoo--image,
+.hero__beauty--image {
   opacity: 0.9;
   border-radius: 5px;
   background-repeat: no-repeat;
@@ -407,7 +376,8 @@ a {
   position: relative;
 }
 
-.section__image .image__banner {
+.hero__tattoo--image .image__banner--top,
+.hero__beauty--image .image__banner--bottom {
   position: absolute;
   background-color: #000000ea;
   color: var(--clr-detail);
@@ -422,12 +392,13 @@ a {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   transition:
-    background-color,
+    background-color 0.25s,
     box-shadow 0.25s;
   z-index: 100;
 }
 
-.section__image .image__about {
+.hero__tattoo--image .about--top,
+.hero__beauty--image .about--bottom {
   background-color: #000000da;
   position: absolute;
   top: 0;
@@ -437,115 +408,52 @@ a {
   padding: 1em 2em;
 }
 
-.image__about-list .image__about-item p {
+.image__about--list .about__list--item p {
   line-height: 1.4;
   margin-bottom: 0.5em;
   padding-left: 2ch;
   position: relative;
 }
 
-.section__image .image__banner:hover {
+.hero__tattoo--image .image__banner--top:hover,
+.hero__beauty--image .image__banner--bottom:hover {
   transition: box-shadow 0.1s;
   box-shadow: 1px 1px 4px #060012ea;
 }
-.section__image .image__banner:hover .marker {
+
+.hero__beauty--image .image__banner--bottom:hover .marker,
+.hero__tattoo--image .image__banner--top:hover .marker {
   transform: translateX(2px);
   text-shadow: 1px 1px 4px gold;
 }
 
-.image__about-list .image__about-item p::before {
+.image__about--list .about__list--item p::before {
   content: ".";
   position: absolute;
   top: -3px;
   left: 0;
 }
 
-.image__about.about--top,
-.image__about.about--bottom {
+.about--top,
+.about--bottom {
   display: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   color: rgb(225, 225, 225);
 }
 
-.section__image .image__banner:active {
+.hero__tattoo--image .image__banner--top:active,
+.hero__beauty--image .image__banner--bottom:active {
   transform: translateY(1px);
   box-shadow: 1px 1px 1px #060012ea;
 }
 
-.hero__tattoo .section__image {
+.hero__tattoo--image {
   background-image: url("/assets/img/IMG_9335_big.jpeg");
 }
 
-.hero__beauty .section__image {
+.hero__beauty--image {
   background-image: url("/assets/img/IMG_9337_big.jpeg");
-}
-
-.section__gallery {
-  height: calc(100dvh - 70px);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.gallery__container {
-  width: 100%;
-  max-width: inherit;
-  min-width: inherit;
-}
-.gallery__header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  min-height: 60px;
-  background: var(--clr-primary);
-  background: linear-gradient(
-    138deg,
-    var(--black-gradient) 0%,
-    var(--clr-primary) 60%
-  );
-  box-shadow: 1px 1px 4px var(--black-gradient);
-  margin-bottom: 10px;
-}
-
-.gallery__header h2 {
-  margin: 0;
-  padding-inline: 0.5em;
-}
-
-.gallery__list {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrapper__tattoo {
-  padding: 1em;
-}
-.wrapper__tattoo .tattoo__list,
-.wrapper__beauty .beauty__list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.wrapper__tattoo .tattoo__list .tattoo__list--item,
-.wrapper__beauty .beauty__list .beauty__list--item {
-  flex-basis: 25%;
-  transition: transform ease-in-out 0.15s;
-  padding: 0.1em;
-}
-
-.wrapper__tattoo .tattoo__list .tattoo__list--item:hover,
-.wrapper__beauty .beauty__list .beauty__list--item:hover {
-  transform: scale(1.1);
-}
-
-.wrapper__tattoo .gallery__content,
-.wrapper__beauty .gallery__content {
-  width: 100%;
-  aspect-ratio: 1/1;
 }
 
 .wrapper__tattoo .gallery__content img,
@@ -554,10 +462,6 @@ a {
   box-shadow: 1px 1px 4px rgb(0, 0, 0);
   cursor: pointer;
   padding: 0.1rem;
-}
-
-.wrapper__beauty {
-  display: none;
 }
 
 /* mediaqueries */
