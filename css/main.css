@@ -16,6 +16,26 @@
   font-style: normal;
 }
 
+/*   --- root css --- */
+:root {
+  --container-max: 64rem;
+  --container-min: 25rem;
+  --font-size: 100%;
+  --H1: 4rem;
+  --H2: 2.9rem;
+  --H3: 1rem;
+  --p: 0.9rem;
+  --a: 0.9rem;
+
+  --clr-font: #bcbcbc;
+  --clr-body: #303030;
+  --clr-primary: #2b2d31;
+  --clr-second: #8f8d8d;
+  --clr-detail: gold;
+  --black-gradient: #1e1e1e;
+  --white-gradient: #d2d2d2;
+}
+
 /*   --- normalize css --- */
 html {
   -moz-tab-size: 4;
@@ -190,26 +210,6 @@ img {
   height: auto;
   vertical-align: middle;
   background-color: #505050;
-}
-
-/*   --- root css --- */
-:root {
-  --container-max: 64rem;
-  --container-min: 25rem;
-  --font-size: 100%;
-  --H1: 4rem;
-  --H2: 2.9rem;
-  --H3: 1rem;
-  --p: 0.9rem;
-  --a: 0.9rem;
-
-  --clr-font: #bcbcbc;
-  --clr-body: #303030;
-  --clr-primary: #2b2d31;
-  --clr-second: #8f8d8d;
-  --clr-detail: gold;
-  --black-gradient: #1e1e1e;
-  --white-gradient: #d2d2d2;
 }
 
 .home {
