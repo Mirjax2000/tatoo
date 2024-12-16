@@ -11,24 +11,35 @@
     <!-- zadej jmeno autora -->
     <meta name="author" content="Miroslav Viktorin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- aktivace fontawesome -->
-    <link
-      rel="stylesheet"
-      href="./assets/fontAwesome_css/fontawesome.min.css"
-    />
-    <link rel="stylesheet" href="./assets/fontAwesome_css/brands.min.css" />
-    <link rel="stylesheet" href="./assets/fontAwesome_css/solid.min.css" />
-
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/main.css" />
-
-    <!-- <link rel="shortcut icon" href="./favicon-32x32.png" type="section__image/x-icon" /> -->
-    <!-- <link rel="shortcut icon" href="./favicon-32x32.webp" type="section__image/x-icon" /> -->
+    <link rel="stylesheet" href="css/gallery.css" />
   </head>
 
   <body class="gallery">
-    <main>
+    <main class="container">
+      <nav class="navbar select_none flex">
+        <div>
+          <h1 class="navbar__brand select_none">AK &nbspBeauty &amp; Tattoo</h1>
+        </div>
+
+        <ul class="navbar__list flex">
+          <li class="navbar__list--item">
+            <a href="./index.html">služby</a>
+          </li>
+
+          <li class="navbar__list--item">
+            <a href="./cenik.html">ceník</a>
+          </li>
+
+          <li class="navbar__list--item">
+            <a href="./gallery.html" class="active">galerie</a>
+          </li>
+
+          <li class="navbar__list--item">
+            <a href="./kontakt.html">kontakt</a>
+          </li>
+        </ul>
+      </nav>
+
       <section class="section__gallery" id="gallery">
         <div class="gallery__container">
           <nav class="gallery__navigation">
@@ -249,7 +260,6 @@
     </main>
     <!-- Jquery -->
     <script src="./js/jquery-3.7.1.min.js"></script>
-
     <!-- main script -->
     <script src="./js/script.js"></script>
   </body>
