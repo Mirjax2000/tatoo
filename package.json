@@ -9,6 +9,7 @@
   "author": "Miroslav Viktorin",
   "license": "ISC",
   "devDependencies": {
-    "htmlhint": "^1.1.4"
+    "htmlhint": "^1.1.4",
+    "prettier": "^3.4.2"
   }
 }

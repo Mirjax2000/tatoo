@@ -113,19 +113,19 @@
     "window.newWindowProfile": "Default",
     "terminal.explorerKind": "both",
     "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.windows": "Cmder",
     "terminal.integrated.profiles.windows": {
-        "Git Bash": {
-            "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+        "Cmder": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+            "args": [
+                "/k",
+                "C:\\cmder\\vendor\\init.bat"
+            ]
         }
     },
-    "scm.inputFontFamily": "monospace",
     "editor.cursorSmoothCaretAnimation": "explicit",
     "editor.cursorWidth": 2,
     "editor.colorDecoratorsActivatedOn": "hover",
-    "terminal.integrated.fontFamily": "'JetBrains Mono'",
-    "terminal.integrated.lineHeight": 1.3,
-    "terminal.integrated.mouseWheelZoom": true,
     "window.zoomLevel": 1.5,
     "ruff.lineLength": 70,
     "mypy-type-checker.showNotifications": "onWarning",
