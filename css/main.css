@@ -31,10 +31,10 @@
   --clr-font: #bcbcbc;
   --clr-body: #303030;
   --clr-primary: #2b2d31;
-  --clr-second: #9b9b9b;
+  --clr-second: #d1d1d1;
   --clr-detail: gold;
   --black-gradient: #1e1e1e;
-  --white-gradient: #d2d2d2;
+  --white-gradient: #b0b0b0;
 }
 
 /*   --- normalize css --- */
@@ -221,6 +221,17 @@ img {
   display: flex;
 }
 
+.back__gradient {
+  background: var(--clr-primary);
+  background: linear-gradient(
+    138deg,
+    var(--black-gradient) 0%,
+    var(--clr-primary) 60%
+  );
+  box-shadow: 1px 1px 4px var(--black-gradient);
+  margin-bottom: 10px;
+}
+
 .home {
   background-color: var(--clr-body);
   font-size: var(--font-size);
@@ -284,15 +295,6 @@ a {
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
-  background: var(--clr-primary);
-  background: linear-gradient(
-    138deg,
-    var(--black-gradient) 0%,
-    var(--clr-primary) 60%
-  );
-  box-shadow: 1px 1px 4px var(--black-gradient);
-  margin-bottom: 10px;
-  z-index: 100;
 }
 
 .navbar .navbar__brand {
@@ -303,6 +305,7 @@ a {
   top: 0;
   left: 0.5em;
   cursor: default;
+  z-index: 100;
 }
 
 .navbar__list {

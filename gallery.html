@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
@@ -16,7 +16,10 @@
 
   <body class="gallery">
     <main class="container">
-      <nav class="navbar select_none flex">
+      <nav
+        class="navbar select_none flex back__gradient"
+        aria-label="Hlavní navigace"
+      >
         <div>
           <h1 class="navbar__brand select_none">AK &nbspBeauty &amp; Tattoo</h1>
         </div>
@@ -40,12 +43,15 @@
         </ul>
       </nav>
 
-      <section class="section__gallery" id="gallery">
+      <section class="gallery" id="gallery">
         <div class="gallery__container">
-          <nav class="gallery__navigation">
+          <nav
+            class="gallery__navigation back__gradient"
+            aria-label="Navigace pro galerii"
+          >
             <header class="gallery__header">
               <h2>Galerie</h2>
-              <ul class="gallery__list">
+              <ul class="gallery__list flex">
                 <li class="gallery__list--item">
                   <a href="tattooGallery" class="active">tattoo</a>
                 </li>
@@ -169,91 +175,6 @@
                 </li>
               </ul>
             </div>
-            <div class="wrapper__beauty">
-              <ul class="beauty__list">
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4156_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4878_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4879_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4880_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4881_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4882_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4883_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4884_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-                <li class="beauty__list--item">
-                  <div class="beauty__content">
-                    <img
-                      src="./assets/img/beauty/IMG_4885_thumb.jpeg"
-                      alt="beauty preview"
-                      width="320"
-                    />
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
@@ -261,6 +182,6 @@
     <!-- Jquery -->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <!-- main script -->
-    <script src="./js/script.js"></script>
+    <script src="./js/gallery.js"></script>
   </body>
 </html>

@@ -1,16 +1,14 @@
 /* --- typography --- */
 @font-face {
   font-family: "Corinthia";
-  src:
-    url(../assets/webfonts/Font-face/Corinthia-Regular.woff2) format("woff2"),
+  src: url(../assets/webfonts/Font-face/Corinthia-Regular.woff2) format("woff2"),
     url(../assets/webfonts/Font-face/Corinthia-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src:
-    url(../assets/webfonts/Font-face/OpenSans-Regular.woff2) format("woff2"),
+  src: url(../assets/webfonts/Font-face/OpenSans-Regular.woff2) format("woff2"),
     url(../assets/webfonts/Font-face/OpenSans-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -220,15 +218,15 @@ img {
   display: flex;
 }
 
+.break__line {
+  border: 1px solid rgba(110, 110, 110, 0.76);
+  margin-bottom: 20px;
+}
+
 .kontakt {
   background-color: var(--clr-body);
   font-size: var(--font-size);
   color: var(--clr-font);
-}
-
-.break__line {
-  border: 1px solid rgba(110, 110, 110, 0.76);
-  margin-bottom: 20px;
 }
 
 .marker {
@@ -278,17 +276,22 @@ a {
   color: var(--clr-font);
 }
 
-.navbar {
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 60px;
+.back__gradient {
   background: var(--clr-primary);
   background: linear-gradient(
     138deg,
     var(--black-gradient) 0%,
     var(--clr-primary) 60%
   );
+  box-shadow: 1px 1px 4px var(--black-gradient);
+  margin-bottom: 10px;
+}
+
+.navbar {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
   box-shadow: 1px 1px 4px var(--black-gradient);
   margin-bottom: 10px;
   z-index: 100;
@@ -312,9 +315,7 @@ a {
 .navbar__list--item a {
   padding-inline: 0.5em;
   margin-inline: 1em;
-  transition:
-    border-bottom 0.25s linear,
-    color 0.25s linear;
+  transition: border-bottom 0.25s linear, color 0.25s linear;
   border-bottom: 1px solid transparent;
   cursor: pointer;
 }
@@ -323,4 +324,115 @@ a {
 .navbar__list--item a:hover {
   border-bottom: 1px solid var(--clr-detail);
   color: white;
+}
+
+.kontakt .kontakt__container {
+  justify-content: space-between;
+  padding: 1.5em;
+  gap: 2%;
+}
+
+.kontakt .kontakt__container > * {
+  flex-basis: 100%;
+}
+
+.kontakt .kontakt__map {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.kontakt .gmap {
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kontakt .kontakt__header,
+.kontakt .connect__header {
+  text-align: center;
+}
+/* .kontakt__connect {
+  position: relative;
+}
+.kontakt__connect::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.05;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("/assets/img/logo_2_small.png");
+} */
+.kontakt__connect .connect__list h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1rem;
+}
+
+.kontakt .connect__list .list__item--sluzby ul {
+  justify-content: center;
+}
+
+.kontakt .connect__list .list__item--sluzby li .dots {
+  position: relative;
+  margin: 0 2em;
+}
+.kontakt .connect__list .list__item--sluzby li .dots::after,
+.kontakt .connect__list .list__item--sluzby li .dots::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px black;
+  background-color: greenyellow;
+  top: 6px;
+}
+
+.kontakt .connect__list .list__item--sluzby li .dots::after {
+  right: -17px;
+}
+
+.kontakt .connect__list .list__item--sluzby li .dots::before {
+  left: -17px;
+}
+
+.kontakt__connect .midway {
+  width: 50%;
+  margin: 0 auto;
+}
+.kontakt__connect .midway h3 {
+  line-height: 1em;
+}
+
+.kontakt .ico {
+  margin-left: 1.5em;
+}
+.kontakt .address h3 {
+  margin-bottom: 0.5em;
+}
+
+.kontakt .address {
+  margin-bottom: 0.7em;
+}
+
+.kontakt .padx {
+  margin-right: 0.5em;
+  color: greenyellow;
+}
+
+.kontakt .instagram {
+  align-items: flex-start;
+}
+
+.kontakt .instagram h3 {
+  margin: 0;
 }

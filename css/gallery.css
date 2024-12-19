@@ -1,16 +1,14 @@
 /* --- typography --- */
 @font-face {
   font-family: "Corinthia";
-  src:
-    url(../assets/webfonts/Font-face/Corinthia-Regular.woff2) format("woff2"),
+  src: url(../assets/webfonts/Font-face/Corinthia-Regular.woff2) format("woff2"),
     url(../assets/webfonts/Font-face/Corinthia-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Open Sans";
-  src:
-    url(../assets/webfonts/Font-face/OpenSans-Regular.woff2) format("woff2"),
+  src: url(../assets/webfonts/Font-face/OpenSans-Regular.woff2) format("woff2"),
     url(../assets/webfonts/Font-face/OpenSans-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -278,17 +276,22 @@ a {
   color: var(--clr-font);
 }
 
-.navbar {
-  position: relative;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 60px;
+.back__gradient {
   background: var(--clr-primary);
   background: linear-gradient(
     138deg,
     var(--black-gradient) 0%,
     var(--clr-primary) 60%
   );
+  box-shadow: 1px 1px 4px var(--black-gradient);
+  margin-bottom: 10px;
+}
+
+.navbar {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
   box-shadow: 1px 1px 4px var(--black-gradient);
   margin-bottom: 10px;
   z-index: 100;
@@ -312,15 +315,18 @@ a {
 .navbar__list--item a {
   padding-inline: 0.5em;
   margin-inline: 1em;
-  transition:
-    border-bottom 0.25s linear,
-    color 0.25s linear;
+  transition: border-bottom 0.25s linear, color 0.25s linear;
   border-bottom: 1px solid transparent;
   cursor: pointer;
 }
 
 .navbar__list--item .active,
+.gallery__list--item .active,
 .navbar__list--item a:hover {
   border-bottom: 1px solid var(--clr-detail);
   color: white;
+}
+
+.gallery__header {
+  text-align: center;
 }
