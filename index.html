@@ -1,53 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>AK Tatoo Beauty</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- zadej popis stranky -->
-        <meta name="description" content="" />
-        <!-- zadej klicova slova -->
-        <meta name="keywords" content="responsive" />
-        <!-- zadej jmeno autora -->
-        <meta name="author" content="Miroslav Viktorin" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="cs">
+<head>
+    <meta charset="UTF-8"/>
+    <title>AK Tatoo &amp; Beauty</title>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta
+            content="Profesionální tetovací služby v našem salonu. Nabízíme širokou nabídku tetování, poradenství a péči o zákazníky. Vytvořte si své jedinečné tetování u nás!"
+            name="description"
+    />
+    <meta
+            content="tetovaci salon, tetování, tetovací služby, tetování na míru, tetování pro ženy, tetování pro muže, kvalitní tetování, odborníci na tetování, kreativní tetování"
+            name="keywords"
+    />
+    <meta content="Miroslav Viktorin" name="author"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-        <!-- aktivace fontawesome -->
-        <!-- <link
-            rel="stylesheet"
-            href="./assets/fontAwesome_css/fontawesome.min.css"
-        />
-        <link rel="stylesheet" href="./assets/fontAwesome_css/brands.min.css" />
-        <link rel="stylesheet" href="./assets/fontAwesome_css/solid.min.css" /> -->
+    <meta content="index, follow" name="robots"/>
+    <meta content="cs_CZ" property="og:locale"/>
+    <meta content="AK Tattoo &amp;Beauty" property="og:title"/>
+    <meta
+            content="Tetovací studio, řasy a kosmetika"
+            property="og:description"
+    />
+    <!-- <meta property="og:image" content="./assets/img/main_page_small.jpeg" /> -->
+    <!-- <meta property="og:url" content="URL stránky" /> -->
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/main.css" />
-      
+    <link
+            as="font"
+            crossorigin="anonymous"
+            href="./assets/webfonts/Font-face/Corinthia-Regular.woff2"
+            rel="preload"
+            type="font/woff2"
+    />
+    <link
+            as="font"
+            crossorigin="anonymous"
+            href="./assets/webfonts/Font-face/OpenSans-Regular.woff2"
+            rel="preload"
+            type="font/woff2"
+    />
+    <link as="image" href="./assets/img/IMG_9335_small.webp" rel="preload"/>
+    <link as="image" href="./assets/img/IMG_9337_small.webp" rel="preload"/>
 
-        <link
-            rel="shortcut icon"
-            href="./favicon-32x32.png"
-            type="image/x-icon"
-        />
-        <link
-            rel="shortcut icon"
-            href="./favicon-32x32.webp"
-            type="image/x-icon"
-        />
+    <link href="css/main.css" rel="stylesheet"/>
 
-    <body class="home">
-        <div class="container"></div>
-            
-        <!-- bootstrap CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="./js/bootstrap.bundle.min.js"></script>
-        <!-- Jquery CDN -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="./js/jquery-3.7.1.min.js"></script>
-        <!-- my script -->
-        <script src="./js/script.js"></script>
-        <!-- ------------------------------ -->
-    </body>
+    <link
+            as="font"
+            crossorigin="anonymous"
+            href="./assets/webfonts/fa-brands-400.woff2"
+            rel="prefetch"
+            type="font/woff2"
+    />
+    <link
+            as="font"
+            crossorigin="anonymous"
+            href="./assets/webfonts/fa-solid-900.woff2"
+            rel="prefetch"
+            type="font/woff2"
+    />
+    <link href="./cenik.html" rel="prefetch"/>
+    <link href="./gallery.html" rel="prefetch"/>
+    <link href="./kontakt.html" rel="prefetch"/>
+    <link href="./css/cenik.css" rel="prefetch"/>
+    <link href="./css/gallery.css" rel="prefetch"/>
+    <link href="./css/kontakt.css" rel="prefetch"/>
+    <link href="./js/gallery.js" rel="prefetch"/>
+    <link href="./js/kontakt.js" rel="prefetch"/>
+    <link href="./js/cenik.js" rel="prefetch"/>
+    <link href="./assets/fontAwesome_css/fontawesome.min.css" rel="prefetch"/>
+    <link href="./assets/fontAwesome_css/brands.min.css" rel="prefetch"/>
+    <link href="./assets/fontAwesome_css/solid.min.css" rel="prefetch"/>
+    <link href="https://www.google.com" rel="preconnect">
+    <style>
+        /* --- typography --- */
+        @font-face {
+            font-family: "Corinthia";
+            src: url(./assets/webfonts/Font-face/Corinthia-Regular.woff2) format("woff2"),
+            url(./assets/webfonts/Font-face/Corinthia-Regular.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Open Sans";
+            src: url(../assets/webfonts/Font-face/OpenSans-Regular.woff2) format("woff2"),
+            url(../assets/webfonts/Font-face/OpenSans-Regular.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="home">
+<main class="container">
+    <nav class="navbar select_none flex back__gradient">
+        <div>
+            <h1 class="navbar__brand select_none">
+                AK &nbsp;Beauty &amp; Tattoo
+            </h1>
+        </div>
+
+        <ul class="navbar__list flex">
+            <li class="navbar__list--item">
+                <a class="active" href="./index.html">služby</a>
+            </li>
+
+            <li class="navbar__list--item">
+                <a href="./cenik.html">ceník</a>
+            </li>
+
+            <li class="navbar__list--item">
+                <a href="./gallery.html">galerie</a>
+            </li>
+
+            <li class="navbar__list--item">
+                <a href="./kontakt.html">kontakt</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <article class="hero__tattoo flex">
+            <div class="hero__tattoo--content">
+                <h2>Tattoo – umění, které zůstane s vámi navždy</h2>
+                <h3>
+                    <strong>Tetování</strong>
+                    je víc než jen kresba na kůži. Je to příběh, který si
+                    ponesete
+                    celý život.
+                </h3>
+                <h3>
+                    <strong>Každá</strong>
+                    linie, každý detail je otiskem momentu, emoce nebo myšlenky,
+                    která
+                    má pro vás význam. Může být symbolem překonané výzvy,
+                    připomínkou
+                    milované osoby, nebo vyjádřením vaší identity a
+                    jedinečnosti.
+                </h3>
+            </div>
+
+            <div class="hero__tattoo--image">
+                <div
+                        class="banner--js image__banner--top flex select_none"
+                        data-target="about--top"
+                >
+                    <b class="marker">&gt;&gt;&gt;</b>
+                </div>
+                <aside
+                        aria-label="Hlavní informace o tetovani."
+                        class="about--top"
+                        id="about--top"
+                >
+                    <h3>
+                        Specializuji se na širokou škálu tetovacích stylů, abych
+                        vám
+                        mohla splnit jakékoli přání:
+                    </h3>
+                    <hr class="break__line"/>
+
+                    <ul class="image__about--list">
+                        <li class="about__list--item">
+                            <p>
+                                <strong>Abstraktní motivy</strong> plné emocí a
+                                originality
+                            </p>
+                        </li>
+
+                        <li class="about__list--item">
+                            <p>
+                                <strong>Dotwork</strong> s precizními tečkami a
+                                geometrickými vzory
+                            </p>
+                        </li>
+
+                        <li class="about__list--item">
+                            <p>
+                                <strong>Barevné tetování</strong>, které rozzáří
+                                každý
+                                detail
+                            </p>
+                        </li>
+
+                        <li class="about__list--item">
+                            <p>
+                                <strong>Jemné linky</strong>, ideální pro
+                                minimalistické a
+                                elegantní motivy
+                            </p>
+                        </li>
+
+                        <li class="about__list--item">
+                            <p>
+                                <strong>Realistické obrazy</strong>, které
+                                vypadají jako
+                                živé
+                            </p>
+                        </li>
+
+                        <li class="about__list--item">
+                            <p>
+                                Úprava starších tetování –
+                                <strong>oživení</strong> barev,
+                                <strong>dodání</strong> detailů nebo úprava
+                                tvaru.
+                            </p>
+                        </li>
+
+                        <li class="about__list--item">
+                            <p>
+                                <strong>Covers</strong>
+                                (zakrytí) – zakryji staré nebo nechtěné tetování
+                                novým
+                                motivem, který budete milovat.
+                            </p>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </article>
+
+        <article class="hero__beauty flex">
+            <div class="hero__beauty--image">
+                <div
+                        class="banner--js image__banner--bottom flex select_none"
+                        data-target="about--bottom"
+                >
+                    <b class="marker">&gt;&gt;&gt;</b>
+                </div>
+                <aside
+                        aria-label="Hlavní informace o makeupu"
+                        class="about--bottom"
+                        id="about--bottom"
+                >
+                    <h3>
+                        Prodlužování a zahušťování řas je mou specialitou. Každá
+                        aplikace je přizpůsobena přesně vašim očím, aby výsledný
+                        efekt
+                        dokonale seděl vaší tváři.
+                    </h3>
+                    <h3>
+                        Péče o pleť je klíčem k tomu, abyste se cítili
+                        sebevědomě a
+                        svěže. Pracuji s kvalitními produkty Mary Kay, které
+                        vybírám
+                        přesně na míru podle typu a potřeb vaší pleti.
+                    </h3>
+                </aside>
+            </div>
+
+            <div class="hero__beauty--content">
+                <h2>Beauty – umění, které vás dělá jedinečnými</h2>
+                <h3>
+                    <strong>Krása</strong> není jen o vzhledu. Je to vyjádření
+                    vaší
+                    individuality a sebevědomí. Je to cesta, jak zvýraznit to,
+                    co vás
+                    činí výjimečnými, a oslavit svou jedinečnost.
+                </h3>
+                <h3>
+                    <strong>Oslavovat</strong>
+                    svou krásu znamená přijmout své pravé já, své chyby i své
+                    přednosti. Jde o to, najít radost v sobě samých a sdílet
+                    tuto
+                    radost s okolním světem. Krása není jen něco, co vidíme je
+                    to
+                    něco, co cítíme.
+                </h3>
+            </div>
+        </article>
+    </section>
+</main>
+<script src="./js/jquery-3.7.1.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
 </html>
