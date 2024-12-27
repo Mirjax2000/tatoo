@@ -11,11 +11,30 @@
     <!-- zadej jmeno autora -->
     <meta content="Miroslav Viktorin" name="author"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link
+            href="./assets/fontAwesome_css/fontawesome.min.css"
+            rel="stylesheet"
+    />
+    <link href="./assets/fontAwesome_css/brands.min.css" rel="stylesheet"/>
+    <link href="./assets/fontAwesome_css/solid.min.css" rel="stylesheet"/>
     <link href="css/gallery.css" rel="stylesheet"/>
 </head>
 
 <body class="gallery">
 <main class="container">
+    <div class="layer center_flex black__hole" id="layer">
+        <div class="layer__wrapper">
+            <div class="layer__close"><i
+                    class="fa-regular fa-circle-xmark fa-2x icon"></i>
+            </div>
+            <div class="inner__layer center_flex select_none">
+                <div class="inner__left marker">&lt;&lt;&lt;</div>
+                <div class="inner__mid" id="inner__mid"></div>
+                <div class="inner__right marker">&gt;&gt;&gt;</div>
+            </div>
+        </div>
+
+    </div>
     <nav
             aria-label="Hlavní navigace"
             class="navbar select_none flex back__gradient"
@@ -55,7 +74,7 @@
                 </header>
             </nav>
             <!--Gallery navbar -->
-            <ul class="gallery__list">
+            <ul class="gallery__list center_flex">
                 <li class="gallery__list--item">
                     <a class="switcher active">tattoo</a>
                 </li>
