@@ -330,3 +330,18 @@ a {
 .cenik__header {
   text-align: center;
 }
+
+.cenik__container .cenik__list .cenik__list--item {
+  padding: 1em;
+  display: flex;
+  justify-items: center;
+  align-items: flex-start;
+}
+
+.cenik__container .cenik__list .cenik__list--item > * {
+  flex-basis: 50%;
+}
+
+.cenik__container .cenik__list .cenik__list--item .item__wrapper--left {
+  border-right: 1px solid var(--clr-detail);
+}

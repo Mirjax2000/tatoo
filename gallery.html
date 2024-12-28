@@ -25,12 +25,15 @@
     <div class="layer center_flex black__hole" id="layer">
         <div class="layer__wrapper">
             <div class="layer__close"><i
-                    class="fa-regular fa-circle-xmark fa-2x icon"></i>
+                    class="fa-regular fa-circle-xmark fa-2x icon"
+                    id="close_icon"></i>
             </div>
             <div class="inner__layer center_flex select_none">
-                <div class="inner__left marker">&lt;&lt;&lt;</div>
+                <div class="marker" id="inner__left">&lt;&lt;&lt;
+                </div>
                 <div class="inner__mid" id="inner__mid"></div>
-                <div class="inner__right marker">&gt;&gt;&gt;</div>
+                <div class="marker" id="inner__right">&gt;&gt;&gt;
+                </div>
             </div>
         </div>
 
@@ -84,7 +87,7 @@
             </ul>
 
             <div>
-                <div class="gallery__wrapper">
+                <div class="gallery__wrapper" id="gallery__wrapper">
                     <!--tattoo list-->
                     <ul class="tattoo__list" id="tattoo__list">
                         <li class="tattoo__list--item">

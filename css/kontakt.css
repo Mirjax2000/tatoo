@@ -21,8 +21,8 @@
     --container-min: 25rem;
     --font-size: 100%;
     --H1: 4rem;
-    --H2: 2.9rem;
-    --H3: 1rem;
+    --H2: 3rem;
+    --H3: 1.55rem;
     --p: 0.9rem;
     --a: 0.9rem;
 
@@ -376,20 +376,20 @@ a {
 .kontakt .connect__list .list__item--sluzby li .dots::before {
     position: absolute;
     content: "";
-    width: 5px;
+    width: 6px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     box-shadow: 1px 1px 4px black;
     background-color: rgba(255, 0, 0, 0.82);
-    top: 6px;
+    top: 8px;
 }
 
 .kontakt .connect__list .list__item--sluzby li .dots::after {
-    right: -17px;
+    right: -25px;
 }
 
 .kontakt .connect__list .list__item--sluzby li .dots::before {
-    left: -17px;
+    left: -25px;
 }
 
 .kontakt__connect .midway {
@@ -402,7 +402,7 @@ a {
 }
 
 .kontakt .ico {
-    margin-left: 1.5em;
+    margin-left: 1.3em;
 }
 
 .kontakt .address h3 {
@@ -415,6 +415,8 @@ a {
 
 .kontakt .padx {
     margin-right: 0.5em;
+    font-size: 1.3rem;
+    padding-top: 3px;
     color: rgba(255, 0, 0, 0.82);
 }
 

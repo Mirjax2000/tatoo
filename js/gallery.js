@@ -1,72 +1,67 @@
 $(function () {
   const switcher = $(".gallery__list .switcher");
+  const galleryWrapper = $("#gallery__wrapper");
   const layer = $("#layer");
-  const rightMarker = $(".inner__right");
-  const leftMarker = $(".inner__left");
+  const closeIcon = $("#close_icon");
+  const rightMarker = $("#inner__right");
+  const leftMarker = $("#inner__left");
   const innerMid = $("#inner__mid");
   const tattooList = $("#tattoo__list");
-  const tattooImg = tattooList.find("img");
   const beautyList = $("#beauty__list");
-  const beautyImg = beautyList.find("img");
-  const closeIcon = $(".container .layer .layer__wrapper .layer__close .icon");
-
-  let currentList = tattooList;
-  let currentImg = tattooImg;
-  let position = null;
 
   switcher.on("click", function () {
     switcher.removeClass("active");
     $(this).addClass("active");
 
     if ($(this).text() === "beauty") {
-      currentList = beautyList;
-      currentImg = beautyImg;
       beautyList.removeClass("black__hole");
       tattooList.addClass("black__hole");
     } else {
-      currentList = tattooList;
-      currentImg = tattooImg;
       tattooList.removeClass("black__hole");
       beautyList.addClass("black__hole");
     }
-
-    position = null;
   });
 
-  currentList.on("click", "img", function () {
-    const src = $(this).attr("src").replace("_thumb", "");
-    position = currentImg.index($(this));
+  function galleryHandler(list) {
+    const src = list.attr("src").replace("_thumb", "");
+    const array = list.closest("ul").find("img");
+    let position = array.index(list);
+    console.log(position);
 
     layer.removeClass("black__hole");
     innerMid.css({
       "background-image": `url(${src})`,
     });
-  });
 
-  leftMarker.on("click", function () {
-    if (position > 0) {
-      position--;
-    } else {
-      position = currentImg.length - 1;
-    }
+    leftMarker.off("click").on("click", function () {
+      if (position > 0) {
+        position--;
+      } else {
+        position = array.length - 1;
+      }
 
-    const prev = $(currentImg[position]).attr("src").replace("_thumb", "");
-    innerMid.css({
-      "background-image": `url(${prev})`,
+      const prev = $(array[position]).attr("src").replace("_thumb", "");
+      innerMid.css({
+        "background-image": `url(${prev})`,
+      });
     });
-  });
 
-  rightMarker.on("click", function () {
-    if (position < currentImg.length - 1) {
-      position++;
-    } else {
-      position = 0;
-    }
+    rightMarker.off("click").on("click", function () {
+      if (position < array.length - 1) {
+        position++;
+      } else {
+        position = 0;
+      }
 
-    const next = $(currentImg[position]).attr("src").replace("_thumb", "");
-    innerMid.css({
-      "background-image": `url(${next})`,
+      const next = $(array[position]).attr("src").replace("_thumb", "");
+      innerMid.css({
+        "background-image": `url(${next})`,
+      });
     });
+  }
+
+  galleryWrapper.on("click", "img", function () {
+    galleryHandler($(this));
   });
 
   closeIcon.on("click", function () {

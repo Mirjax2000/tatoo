@@ -446,16 +446,16 @@ a {
     padding-bottom: .5em;
 }
 
-.container .layer .inner__layer .inner__left,
-.container .layer .inner__layer .inner__right {
+#inner__left,
+#inner__right {
     flex-basis: 10%;
     text-align: center;
     letter-spacing: -3px;
     transition: letter-spacing .1s ease-in-out;
 }
 
-.container .layer .inner__layer .inner__left:hover,
-.container .layer .inner__layer .inner__right:hover {
+#inner__left:hover,
+#inner__right:hover {
     letter-spacing: -2px;
 }
 
