@@ -8,6 +8,7 @@ $(function () {
   const innerMid = $("#inner__mid");
   const tattooList = $("#tattoo__list");
   const beautyList = $("#beauty__list");
+  const altText = $("#alt__text");
 
   switcher.on("click", function () {
     switcher.removeClass("active");
@@ -25,8 +26,9 @@ $(function () {
   function galleryHandler(list) {
     const src = list.attr("src").replace("_thumb", "");
     const array = list.closest("ul").find("img");
+    const txt = list.attr("alt");
     let position = array.index(list);
-    console.log(position);
+    altText.text(txt);
 
     layer.removeClass("black__hole");
     innerMid.css({
@@ -39,6 +41,8 @@ $(function () {
       } else {
         position = array.length - 1;
       }
+      const txt = $(array[position]).attr("alt");
+      altText.text(txt);
 
       const prev = $(array[position]).attr("src").replace("_thumb", "");
       innerMid.css({
@@ -52,6 +56,8 @@ $(function () {
       } else {
         position = 0;
       }
+      const txt = $(array[position]).attr("alt");
+      altText.text(txt);
 
       const next = $(array[position]).attr("src").replace("_thumb", "");
       innerMid.css({

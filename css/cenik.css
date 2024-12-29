@@ -43,6 +43,7 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-size: var(--font-size);
 }
 
 hr {
@@ -227,7 +228,6 @@ img {
 
 .cenik {
   background-color: var(--clr-body);
-  font-size: var(--font-size);
   color: var(--clr-font);
 }
 
@@ -350,8 +350,9 @@ a {
   text-align: center;
 }
 
+
 .section__cenik .cenik__list .cenik__list--item {
-  padding: 1em;
+  padding: 1em 3em;
   cursor: pointer;
   user-select: none;
 }
@@ -360,10 +361,18 @@ a {
   margin-top: 0.7em;
 }
 
+.section__cenik .cenik__list .service:last-child .service__container {
+  padding-bottom: 0;
+}
+
+.section__cenik .cenik__list .service {
+}
+
 .section__cenik .cenik__list .service__container {
   border-right: 1px solid var(--clr-detail);
-  flex-basis: 50%;
+  flex-basis: 70%;
   padding-right: 1em;
+  padding-bottom: 1em;
 }
 
 
@@ -372,7 +381,7 @@ a {
 }
 
 .section__cenik .cenik__list .price {
-  flex-basis: 50%;
+  flex-basis: 30%;
   padding-left: 1em;
   padding-top: .3em;
 }
@@ -381,3 +390,22 @@ a {
   padding-bottom: .4em;
 }
 
+
+@media (max-width: 800px) {
+  :root {
+    --font-size: 90%;
+  }
+
+
+  .section__cenik .cenik__list .cenik__list--item {
+    padding-inline: 3em;
+  }
+
+  .section__cenik .cenik__list .service__container {
+    flex-basis: 80%;
+  }
+
+  .section__cenik .cenik__list .price {
+    flex-basis: 20%;
+  }
+}

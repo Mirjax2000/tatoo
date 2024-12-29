@@ -44,6 +44,7 @@ html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    font-size: var(--font-size);
 }
 
 hr {
@@ -227,7 +228,6 @@ img {
 
 .gallery {
     background-color: var(--clr-body);
-    font-size: var(--font-size);
     color: var(--clr-font);
 }
 
@@ -423,9 +423,24 @@ a {
 }
 
 .container .layer .layer__wrapper .layer__close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 80%;
     margin-inline: auto;
-    text-align: right;
+    text-align: center;
+    margin-bottom: .2em;
+}
+
+#alt__text {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    flex-grow: 1;
+    padding: .5em;
+    margin-inline: 2em 1em;
+    line-height: 1em;
+    border-radius: 0.25em;
+    border: 1px solid rgba(70, 70, 70, 0.8);
 }
 
 .container .layer .layer__wrapper .layer__close .icon {
@@ -470,4 +485,8 @@ a {
 }
 
 
-
+@media (max-width: 800px) {
+    :root {
+        --font-size: 90%;
+    }
+}
