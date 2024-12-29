@@ -263,6 +263,14 @@ img {
     margin: 0 auto;
 }
 
+strong {
+    color: #dddddd;
+}
+
+strong.black {
+    color: #141414;
+}
+
 /* globalni nastaveni fontu */
 h1,
 h2,
