@@ -231,6 +231,7 @@ img {
     );
     box-shadow: 1px 1px 4px var(--black-gradient);
     margin-bottom: 10px;
+
 }
 
 .home {
@@ -305,9 +306,11 @@ a {
 
 .navbar {
     position: relative;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
+    user-select: none;
 }
 
 .navbar .navbar__brand {
@@ -322,6 +325,7 @@ a {
 }
 
 .navbar__list {
+    display: flex;
     justify-content: flex-end;
     align-items: center;
 }
@@ -340,25 +344,14 @@ a {
     color: white;
 }
 
-.hero {
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.488);
-}
 
 .hero__tattoo,
 .hero__beauty {
+    display: flex;
     justify-content: space-between;
     align-items: stretch;
-    height: calc(50dvh - 35px);
+    height: calc(50dvh - 45px);
     min-height: 24rem;
-}
-
-.hero__tattoo {
-    background: var(--clr-primary);
-    background: linear-gradient(
-            138deg,
-            var(--black-gradient) 0%,
-            var(--clr-primary) 60%
-    );
 }
 
 .hero__beauty {
@@ -408,6 +401,8 @@ a {
     left: 0;
     right: 0;
     height: 10%;
+    display: flex;
+    user-select: none;
     justify-content: flex-start;
     align-items: center;
     border-bottom-left-radius: 4px;
