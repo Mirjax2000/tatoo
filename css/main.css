@@ -378,16 +378,17 @@ a {
     margin: 1.3em;
 }
 
-.hero__tattoo--image {
+.hero__tattoo .hero__tattoo--image {
     background-image: url("/assets/img/IMG_9335_small.webp");
 }
 
 
-.hero__beauty--image {
+.hero__beauty .hero__beauty--image {
     background-image: url("/assets/img/IMG_9337_small.webp");
 }
-.hero__tattoo--image,
-.hero__beauty--image {
+
+.hero__tattoo .hero__tattoo--image,
+.hero__beauty .hero__beauty--image {
     opacity: 0.9;
     border-radius: 5px;
     background-repeat: no-repeat;
