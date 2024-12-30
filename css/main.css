@@ -496,6 +496,43 @@ a {
 
 }
 
+@media (max-height: 500px) {
+
+    .navbar {
+        margin: 0;
+        min-height: 40px;
+        justify-content: flex-end;
+    }
+
+    .navbar .navbar__brand {
+        display: none;
+    }
+
+    .hero__tattoo,
+    .hero__beauty {
+        flex-direction: column;
+        height: calc(100vh - 50px);
+        min-height: 42em;
+        padding-inline: 3em;
+        justify-content: flex-start;
+    }
+
+    .hero__tattoo--content,
+    .hero__beauty--content {
+        order: 1;
+        margin-bottom: 0;
+    }
+
+    .hero__tattoo--image,
+    .hero__beauty--image {
+        order: 2;
+        flex: 5;
+        min-height: 22em;
+        margin-top: 0;
+        background-position-y: 15%;
+    }
+}
+
 @media (max-width: 950px) {
     :root {
         --font-size: 90%;
@@ -543,6 +580,7 @@ a {
     .hero__beauty {
         flex-direction: column;
         height: calc(100vh - 90px);
+        min-height: 42em;
         padding-inline: 3em;
         justify-content: flex-start;
     }
@@ -552,7 +590,6 @@ a {
         order: 1;
         margin-bottom: 0;
     }
-
 
     .hero__tattoo--image,
     .hero__beauty--image {
@@ -583,11 +620,18 @@ a {
         padding-inline: 1em;
     }
 
+    .hero__tattoo--image,
+    .hero__beauty--image,
+    .hero__tattoo--content,
+    .hero__beauty--content {
+        order: 1;
+        margin: .8em;
+    }
 }
 
 @media (max-width: 420px) {
     :root {
-        --font-size: 85%;
+        --font-size: 88%;
     }
 
     .hero__tattoo,
@@ -600,7 +644,7 @@ a {
     .hero__beauty--image {
         order: 2;
         flex: 5;
-        min-height: 22em;
+        min-height: 21em;
         margin-top: 0;
         background-position-y: 20%;
     }
@@ -608,5 +652,10 @@ a {
     .hero__beauty--image {
         background-position-y: 35%;
     }
+}
 
+@media (max-width: 375px) {
+    :root {
+        --font-size: 88%;
+    }
 }
