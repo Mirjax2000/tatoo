@@ -355,7 +355,7 @@ a {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    height: calc(50dvh - 2.5em);
+    height: calc(50svh - 2.5em);
     overflow: hidden;
     min-height: 25em;
 }
@@ -489,7 +489,7 @@ a {
 @media (max-height: 790px) {
     .hero__tattoo,
     .hero__beauty {
-        height: calc(100dvh - 70px);
+        height: calc(100svh - 70px);
         overflow: hidden;
         min-height: 25em;
     }
@@ -511,7 +511,7 @@ a {
     .hero__tattoo,
     .hero__beauty {
         flex-direction: column;
-        height: calc(100vh - 50px);
+        height: calc(100svh - 50px);
         min-height: 42em;
         padding-inline: 3em;
         justify-content: flex-start;
@@ -579,7 +579,7 @@ a {
     .hero__tattoo,
     .hero__beauty {
         flex-direction: column;
-        height: calc(100vh - 90px);
+        height: calc(100svh - 90px);
         min-height: 42em;
         padding-inline: 3em;
         justify-content: flex-start;
