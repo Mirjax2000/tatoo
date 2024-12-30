@@ -379,12 +379,12 @@ a {
 }
 
 .hero__tattoo .hero__tattoo--image {
-    background-image: url(./assets/img/IMG_9335_small.webp);
+    background-image: url("/assets/img/IMG_9335_small.webp");
 }
 
 
 .hero__beauty .hero__beauty--image {
-    background-image: url(./assets/img/IMG_9337_small.webp);
+    background-image: url("/assets/img/IMG_9337_small.webp");
 }
 
 .hero__tattoo .hero__tattoo--image,
