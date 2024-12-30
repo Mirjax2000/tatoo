@@ -11,21 +11,43 @@
     <!-- zadej jmeno autora -->
     <meta content="Miroslav Viktorin" name="author"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link
+            href="./assets/fontAwesome_css/fontawesome.min.css"
+            rel="stylesheet"
+    />
+    <link href="./assets/fontAwesome_css/brands.min.css" rel="stylesheet"/>
+    <link href="./assets/fontAwesome_css/solid.min.css" rel="stylesheet"/>
     <link href="css/gallery.css" rel="stylesheet"/>
 </head>
 
 <body class="gallery">
 <main class="container">
-    <nav
-            aria-label="Hlavní navigace"
-            class="navbar select_none flex back__gradient"
-    >
-        <div>
-            <h1 class="navbar__brand select_none">AK &nbsp;Beauty &amp;
-                Tattoo</h1>
+    <div class="layer center_flex black__hole" id="layer">
+        <div class="layer__wrapper">
+            <div class="layer__close">
+                <p id="alt__text"></p>
+                <i
+                    class="fa-regular fa-circle-xmark fa-2x icon"
+                    id="close_icon"></i>
+            </div>
+            <div class="inner__layer center_flex select_none">
+                <div class="marker" id="inner__left">&lt;&lt;&lt;
+                </div>
+                <div class="inner__mid" id="inner__mid"></div>
+                <div class="marker" id="inner__right">&gt;&gt;&gt;
+                </div>
+            </div>
         </div>
 
-        <ul class="navbar__list flex">
+    </div>
+    <nav
+            aria-label="Hlavní navigace"
+            class="navbar back__gradient"
+    >
+        <h1 class="navbar__brand">AK &nbsp;Beauty &amp;
+                Tattoo</h1>
+
+        <ul class="navbar__list">
             <li class="navbar__list--item">
                 <a href="./index.html">služby</a>
             </li>
@@ -55,7 +77,7 @@
                 </header>
             </nav>
             <!--Gallery navbar -->
-            <ul class="gallery__list">
+            <ul class="gallery__list center_flex">
                 <li class="gallery__list--item">
                     <a class="switcher active">tattoo</a>
                 </li>
@@ -65,13 +87,13 @@
             </ul>
 
             <div>
-                <div class="gallery__wrapper">
+                <div class="gallery__wrapper" id="gallery__wrapper">
                     <!--tattoo list-->
                     <ul class="tattoo__list" id="tattoo__list">
                         <li class="tattoo__list--item">
                             <div class="gallery__content">
                                 <img
-                                        alt="tattoo preview"
+                                        alt="Tetovaní na temeno"
                                         height="320"
                                         src="./assets/img/tattoo/IMG_0001_thumb.webp"
                                         width="320"
@@ -81,7 +103,7 @@
                         <li class="tattoo__list--item">
                             <div class="gallery__content">
                                 <img
-                                        alt="tattoo preview"
+                                        alt="tetovaní na ruku - anděl"
                                         height="320"
                                         src="./assets/img/tattoo/IMG_0002_thumb.webp"
                                         width="320"
@@ -111,7 +133,7 @@
                         <li class="tattoo__list--item">
                             <div class="gallery__content">
                                 <img
-                                        alt="tattoo preview"
+                                        alt="tetování na rameno, barevný motýl"
                                         height="320"
                                         src="./assets/img/tattoo/IMG_3223_thumb.webp"
                                         width="320"
@@ -121,7 +143,7 @@
                         <li class="tattoo__list--item">
                             <div class="gallery__content">
                                 <img
-                                        alt="tattoo preview"
+                                        alt="tetování okamžiky života"
                                         height="320"
                                         src="./assets/img/tattoo/IMG_3543_thumb.webp"
                                         width="320"

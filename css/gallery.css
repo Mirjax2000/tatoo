@@ -26,7 +26,7 @@
     --p: 0.9rem;
     --a: 0.9rem;
 
-    --clr-font: #bcbcbc;
+    --clr-font: rgba(188, 188, 188, 0.45);
     --clr-body: #303030;
     --clr-primary: #2b2d31;
     --clr-second: #8f8d8d;
@@ -44,6 +44,7 @@ html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    font-size: var(--font-size);
 }
 
 hr {
@@ -219,9 +220,14 @@ img {
     display: flex;
 }
 
+.center_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .gallery {
     background-color: var(--clr-body);
-    font-size: var(--font-size);
     color: var(--clr-font);
 }
 
@@ -237,6 +243,7 @@ img {
     font-weight: bold;
     font-size: 1.5rem;
     color: var(--clr-detail);
+    cursor: pointer;
 }
 
 .container {
@@ -289,26 +296,24 @@ a {
 }
 
 .navbar {
-    position: relative;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
-    box-shadow: 1px 1px 4px var(--black-gradient);
-    margin-bottom: 10px;
-    z-index: 100;
+    user-select: none;
 }
 
 .navbar .navbar__brand {
     font-family: "Corinthia", cursive;
     font-size: var(--H1);
     font-weight: 400;
-    position: absolute;
-    top: 0;
-    left: 0.5em;
-    cursor: default;
+    margin-bottom: -.2em;
+    margin-left: .5em;
+    white-space: nowrap;
 }
 
 .navbar__list {
+    display: flex;
     justify-content: flex-end;
     align-items: center;
 }
@@ -341,12 +346,6 @@ a {
     text-align: center;
 }
 
-.gallery .gallery__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .gallery__wrapper {
     position: relative;
 }
@@ -362,15 +361,15 @@ a {
     transition: opacity .5s ease-in-out;
 }
 
-.gallery__wrapper .black__hole {
+.gallery .black__hole {
     position: absolute;
-    top: 0;
-    left: 0;
+    margin-right: -9999px;
     width: 0;
     height: 0;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    overflow: hidden;
 }
 
 .gallery__wrapper .tattoo__list .tattoo__list--item,
@@ -404,3 +403,110 @@ a {
     transform: scale(1.025);
 }
 
+
+.container .layer {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.81);
+    transition: opacity .25s ease-in-out;
+    z-index: 200;
+}
+
+.container .layer .layer__wrapper {
+    width: 100%;
+}
+
+.container .layer .inner__layer {
+    flex-basis: 100%;
+}
+
+.container .layer .layer__wrapper .layer__close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: .2em;
+}
+
+#alt__text {
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
+    padding: .5em;
+    margin-inline: 2em 1em;
+    line-height: 1em;
+    border-radius: 0.25em;
+    border: 1px solid rgba(70, 70, 70, 0.8);
+}
+
+.container .layer .layer__wrapper .layer__close .icon {
+    color: var(--clr-detail);
+    transition: transform 0.1s linear;
+    cursor: pointer;
+}
+
+.container .layer .layer__wrapper .layer__close .icon:hover {
+    transform: scale(1.025);
+}
+
+.container .layer .layer__wrapper .layer__close .icon:active {
+    transform: scale(.99);
+}
+
+.container .layer .layer__wrapper .layer__close :first-child {
+    padding-bottom: .5em;
+}
+
+#inner__left,
+#inner__right {
+    flex-basis: 10%;
+    text-align: center;
+    letter-spacing: -3px;
+    transition: letter-spacing .1s ease-in-out;
+}
+
+#inner__left:hover,
+#inner__right:hover {
+    letter-spacing: -2px;
+}
+
+#inner__mid {
+    flex-basis: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+@media (max-width: 800px) {
+    :root {
+        --font-size: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+    .gallery .container .navbar {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .gallery .container .navbar .navbar__list {
+        order: 1;
+        padding-block: 1em;
+    }
+
+    .gallery .container .navbar .navbar__brand {
+        order: 2;
+        margin-left: 0;
+    }
+
+    .gallery__wrapper .tattoo__list .tattoo__list--item,
+    .gallery__wrapper .beauty__list .beauty__list--item {
+        flex-basis: 33%;
+    }
+}

@@ -21,8 +21,8 @@
     --container-min: 25rem;
     --font-size: 100%;
     --H1: 4rem;
-    --H2: 2.9rem;
-    --H3: 1rem;
+    --H2: 3rem;
+    --H3: 1.55rem;
     --p: 0.9rem;
     --a: 0.9rem;
 
@@ -44,6 +44,7 @@ html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    font-size: var(--font-size);
 }
 
 hr {
@@ -226,7 +227,6 @@ img {
 
 .kontakt {
     background-color: var(--clr-body);
-    font-size: var(--font-size);
     color: var(--clr-font);
 }
 
@@ -288,27 +288,26 @@ a {
     margin-bottom: 10px;
 }
 
+
 .navbar {
-    position: relative;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
-    box-shadow: 1px 1px 4px var(--black-gradient);
-    margin-bottom: 10px;
-    z-index: 100;
+    user-select: none;
 }
 
 .navbar .navbar__brand {
     font-family: "Corinthia", cursive;
     font-size: var(--H1);
     font-weight: 400;
-    position: absolute;
-    top: 0;
-    left: 0.5em;
-    cursor: default;
+    margin-bottom: -.2em;
+    margin-left: .5em;
+    white-space: nowrap;
 }
 
 .navbar__list {
+    display: flex;
     justify-content: flex-end;
     align-items: center;
 }
@@ -328,6 +327,7 @@ a {
 }
 
 .kontakt .kontakt__container {
+    display: flex;
     justify-content: space-between;
     padding: 1.5em;
     gap: 2%;
@@ -376,20 +376,20 @@ a {
 .kontakt .connect__list .list__item--sluzby li .dots::before {
     position: absolute;
     content: "";
-    width: 5px;
+    width: 6px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     box-shadow: 1px 1px 4px black;
     background-color: rgba(255, 0, 0, 0.82);
-    top: 6px;
+    top: 8px;
 }
 
 .kontakt .connect__list .list__item--sluzby li .dots::after {
-    right: -17px;
+    right: -25px;
 }
 
 .kontakt .connect__list .list__item--sluzby li .dots::before {
-    left: -17px;
+    left: -25px;
 }
 
 .kontakt__connect .midway {
@@ -402,7 +402,11 @@ a {
 }
 
 .kontakt .ico {
-    margin-left: 1.5em;
+    margin-left: 1.3em;
+}
+
+.kontakt .adresa {
+    display: flex;
 }
 
 .kontakt .address h3 {
@@ -415,13 +419,40 @@ a {
 
 .kontakt .padx {
     margin-right: 0.5em;
+    font-size: 1.3rem;
+    padding-top: 3px;
     color: rgba(255, 0, 0, 0.82);
 }
 
 .kontakt .instagram {
+    display: flex;
     align-items: flex-start;
 }
 
 .kontakt .instagram h3 {
     margin: 0;
 }
+
+@media (max-width: 800px) {
+    :root {
+        --font-size: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+    .kontakt .container .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kontakt .container .navbar .navbar__list {
+        order: 1;
+        padding-block: 1em;
+    }
+
+    .kontakt .container .navbar .navbar__brand {
+        order: 2;
+        margin-left: 0;
+    }
+}
+
