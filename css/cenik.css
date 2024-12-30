@@ -308,26 +308,24 @@ a {
 }
 
 .navbar {
-  position: relative;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
-  box-shadow: 1px 1px 4px var(--black-gradient);
-  margin-bottom: 10px;
-  z-index: 100;
+  user-select: none;
 }
 
 .navbar .navbar__brand {
   font-family: "Corinthia", cursive;
   font-size: var(--H1);
   font-weight: 400;
-  position: absolute;
-  top: 0;
-  left: 0.5em;
-  cursor: default;
+  margin-bottom: -.2em;
+  margin-left: .5em;
+  white-space: nowrap;
 }
 
 .navbar__list {
+  display: flex;
   justify-content: flex-end;
   align-items: center;
 }
@@ -409,3 +407,21 @@ a {
     flex-basis: 20%;
   }
 }
+
+@media (max-width: 750px) {
+  .cenik .container .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cenik .container .navbar .navbar__list {
+    order: 1;
+    padding-block: 1em;
+  }
+
+  .cenik .container .navbar .navbar__brand {
+    order: 2;
+    margin-left: 0;
+  }
+}
+
