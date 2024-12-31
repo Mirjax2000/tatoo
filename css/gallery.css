@@ -513,9 +513,18 @@ a {
     background-size: contain;
 }
 
-@media (max-height: 880px) {
+@media (max-height: 800px) {
     :root {
         --font-size: 90%;
+    }
+
+    .gallery .container .layer {
+        align-items: stretch;
+    }
+
+    #inner__mid {
+        flex-basis: 70%;
+
     }
 }
 
@@ -529,6 +538,18 @@ a {
 
     .navbar .navbar__brand {
         display: none;
+    }
+
+    #inner__mid {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-height: 370px) {
+
+    #inner__mid {
+        flex-basis: 40%;
+
     }
 }
 
