@@ -349,12 +349,24 @@ a {
 
 
 .section__cenik .cenik__list .cenik__list--item {
-  padding: 1em 3em;
+  padding: 1em 2em;
   cursor: pointer;
   user-select: none;
 }
 
-.section__cenik .cenik__list .cenik__list--item h2 {
+.section__cenik .cenik__list .cenik__list--item .marker__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section__cenik .cenik__list .cenik__list--item .marker__wrapper .marker {
+  flex: 1;
+}
+
+.section__cenik .cenik__list .cenik__list--item .marker__wrapper h2 {
+  text-align: left;
+  flex: 10;
   margin-bottom: 0;
   white-space: nowrap;
 }
