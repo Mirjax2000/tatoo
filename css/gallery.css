@@ -1,38 +1,40 @@
 /* --- typography --- */
 @font-face {
     font-family: "Corinthia";
-    src: url(../assets/webfonts/Font-face/Corinthia-Regular.woff2) format("woff2"),
-    url(../assets/webfonts/Font-face/Corinthia-Regular.ttf) format("truetype");
+    src: url("../assets/webfonts/Font-face/Corinthia-Regular.woff2") format("woff2"),
+    url("../assets/webfonts/Font-face/Corinthia-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: url(../assets/webfonts/Font-face/OpenSans-Regular.woff2) format("woff2"),
-    url(../assets/webfonts/Font-face/OpenSans-Regular.ttf) format("truetype");
+    src: url("../assets/webfonts/Font-face/OpenSans-Regular.woff2") format("woff2"),
+    url("../assets/webfonts/Font-face/OpenSans-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 /*   --- root css --- */
 :root {
     --container-max: 64rem;
-    --container-min: 25rem;
+    --container-min: 18.75rem;
     --font-size: 100%;
-    --H1: 4rem;
+    --H1: 2.5rem;
     --H2: 2.9rem;
     --H3: 1rem;
-    --p: 0.9rem;
-    --a: 0.9rem;
+    --p: 0.87rem;
+    --a: 1rem;
 
-    --clr-font: rgba(188, 188, 188, 0.45);
+    --clr-font: #bcbcbc;
     --clr-body: #303030;
     --clr-primary: #2b2d31;
-    --clr-second: #8f8d8d;
+    --clr-second: #d1d1d1;
     --clr-detail: gold;
     --black-gradient: #1e1e1e;
-    --white-gradient: #d2d2d2;
+    --white-gradient: #b0b0b0;
 }
 
 /*   --- normalize css --- */
@@ -184,11 +186,6 @@ article {
     padding: 0;
 }
 
-a {
-    display: inline-block;
-    text-decoration: none;
-}
-
 li {
     list-style-type: none;
 }
@@ -220,10 +217,16 @@ img {
     display: flex;
 }
 
-.center_flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.back__gradient {
+    background: var(--clr-primary);
+    background: linear-gradient(
+            138deg,
+            var(--black-gradient) 0%,
+            var(--clr-primary) 60%
+    );
+    box-shadow: 1px 1px 4px var(--black-gradient);
+    margin-bottom: 10px;
+
 }
 
 .gallery {
@@ -231,25 +234,39 @@ img {
     color: var(--clr-font);
 }
 
+
 .break__line {
     border: 1px solid rgba(110, 110, 110, 0.76);
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 
 .marker {
-    transition: transform 0.1s;
     text-shadow: 1px 1px 2px rgba(255, 217, 0, 0.615);
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.3rem;
+    letter-spacing: -3px;
     color: var(--clr-detail);
+    transition: letter-spacing .1s ease-in-out, transform .1s;
     cursor: pointer;
+}
+
+.marker:hover {
+    letter-spacing: 0;
 }
 
 .container {
     width: clamp(var(--container-min), 100%, var(--container-max));
     position: relative;
     margin: 0 auto;
+    min-height: 700px;
+}
+
+strong {
+    color: #dddddd;
+}
+
+strong.black {
+    color: #141414;
 }
 
 /* globalni nastaveni fontu */
@@ -277,45 +294,53 @@ h3 {
     line-height: 1.6;
 }
 
-p,
-a {
+p, a {
     font-family: "Open Sans", sans-serif;
-    font-size: var(--p);
     color: var(--clr-font);
 }
 
-.back__gradient {
-    background: var(--clr-primary);
-    background: linear-gradient(
-            138deg,
-            var(--black-gradient) 0%,
-            var(--clr-primary) 60%
-    );
-    box-shadow: 1px 1px 4px var(--black-gradient);
-    margin-bottom: 10px;
+p {
+    font-size: var(--p);
+}
+
+a {
+    font-size: var(--a);
+    display: inline-block;
+    text-decoration: none;
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
     user-select: none;
+    z-index: 1;
 }
 
 .navbar .navbar__brand {
     font-family: "Corinthia", cursive;
     font-size: var(--H1);
     font-weight: 400;
-    margin-bottom: -.2em;
     margin-left: .5em;
-    white-space: nowrap;
 }
 
 .navbar__list {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: .5em;
+}
+
+
+.gallery__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .navbar__list--item a,
@@ -340,7 +365,6 @@ a {
     border-bottom: 1px solid var(--clr-detail);
     color: white;
 }
-
 
 .gallery__header {
     text-align: center;
@@ -405,6 +429,9 @@ a {
 
 
 .container .layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.81);
@@ -416,10 +443,6 @@ a {
     width: 100%;
 }
 
-.container .layer .inner__layer {
-    flex-basis: 100%;
-}
-
 .container .layer .layer__wrapper .layer__close {
     display: flex;
     align-items: center;
@@ -429,6 +452,15 @@ a {
     text-align: center;
     margin-bottom: .2em;
 }
+
+.container .layer .inner__layer {
+    flex-basis: 100%;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #alt__text {
     background-color: rgba(0, 0, 0, 0.5);
@@ -478,17 +510,36 @@ a {
     border: 2px solid white;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
 }
 
-
-@media (max-width: 800px) {
+@media (max-height: 880px) {
     :root {
         --font-size: 90%;
     }
 }
 
-@media (max-width: 750px) {
+@media (max-height: 500px) {
+
+    .navbar {
+        margin: 0;
+        min-height: 40px;
+        justify-content: flex-end;
+    }
+
+    .navbar .navbar__brand {
+        display: none;
+    }
+}
+
+
+@media (max-width: 950px) {
+    :root {
+        --font-size: 90%;
+    }
+}
+
+@media (max-width: 730px) {
     .gallery .container .navbar {
         flex-direction: column;
         text-align: center;
@@ -510,3 +561,4 @@ a {
         flex-basis: 33%;
     }
 }
+

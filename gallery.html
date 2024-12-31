@@ -4,13 +4,23 @@
     <meta charset="UTF-8"/>
     <title>AK Tatoo Beauty | gallery</title>
     <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <!-- zadej popis stranky -->
-    <meta content="" name="description"/>
-    <!-- zadej klicova slova -->
-    <meta content="responsive" name="keywords"/>
+    <meta
+            content="Profesionální tetovací a kosmetické služby v našem salonu. Nabízíme širokou nabídku tetování, kosmetiky, péče o řasy, make-upu a vizážistiky. Vytvořte si své jedinečné tetování nebo si dopřejte profesionální kosmetickou péči u nás!"
+            name="description"
+    />
+    <meta
+            content="tetovací salon, tetování, tetovací služby, tetování na míru, tetování pro ženy, tetování pro muže, kvalitní tetování, odborníci na tetování, kreativní tetování, kosmetika, řasy, prodlužování řas, make-up, vizážistika, péče o pleť"
+            name="keywords"
+    />
     <!-- zadej jmeno autora -->
     <meta content="Miroslav Viktorin" name="author"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link
+            href="./assets/fontAwesome_css/fontawesome.min.css"
+            rel="stylesheet"
+    />
+    <link href="./assets/fontAwesome_css/brands.min.css" rel="stylesheet"/>
+    <link href="./assets/fontAwesome_css/solid.min.css" rel="stylesheet"/>
     <link href="css/gallery.css" rel="stylesheet"/>
     <link as="image" href="./assets/img/tattoo/IMG_0001.webp" rel="prefetch"/>
     <link as="image" href="./assets/img/tattoo/IMG_0002.webp" rel="prefetch"/>
@@ -40,7 +50,7 @@
 
 <body class="gallery">
 <main class="container">
-    <div class="layer center_flex black__hole" id="layer">
+    <div class="layer black__hole" id="layer">
         <div class="layer__wrapper">
             <div class="layer__close">
                 <p id="alt__text"></p>
@@ -48,7 +58,7 @@
                     class="fa-regular fa-circle-xmark fa-2x icon"
                     id="close_icon"></i>
             </div>
-            <div class="inner__layer center_flex select_none">
+            <div class="inner__layer">
                 <div class="marker" id="inner__left">&lt;&lt;&lt;
                 </div>
                 <div class="inner__mid" id="inner__mid"></div>
@@ -95,7 +105,7 @@
                 </header>
             </nav>
             <!--Gallery navbar -->
-            <ul class="gallery__list center_flex">
+            <ul class="gallery__list">
                 <li class="gallery__list--item">
                     <a class="switcher active">tattoo</a>
                 </li>
