@@ -343,7 +343,7 @@ a {
 }
 
 
-.cenik__header {
+.cenik__header h2 {
   text-align: center;
 }
 
@@ -410,6 +410,12 @@ a {
   padding-bottom: .4em;
 }
 
+@media (max-height: 880px) {
+  :root {
+    --font-size: 90%;
+  }
+}
+
 @media (max-height: 500px) {
 
   .navbar {
@@ -423,11 +429,6 @@ a {
   }
 }
 
-@media (max-height: 880px) {
-  :root {
-    --font-size: 90%;
-  }
-}
 
 @media (max-width: 950px) {
   :root {
@@ -461,6 +462,11 @@ a {
   .cenik .container .navbar .navbar__brand {
     order: 2;
     margin-left: 0;
+  }
+
+  .cenik__header h2,
+  .section__cenik .cenik__list .cenik__list--item .marker__wrapper h2 {
+    font-size: calc((var(--H2) - 1em));
   }
 }
 
