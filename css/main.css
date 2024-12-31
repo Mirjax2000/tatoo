@@ -491,9 +491,17 @@ a {
 @media (max-height: 790px) {
     .hero__tattoo,
     .hero__beauty {
-        height: calc(100svh - 70px);
         overflow: hidden;
         min-height: 25em;
+    }
+
+    .hero__tattoo {
+        height: calc(100svh - 70px);
+    }
+
+    .hero__beauty {
+
+        height: calc(100svh - 70px);
     }
 
 }
@@ -656,8 +664,4 @@ a {
     }
 }
 
-@media (max-width: 375px) {
-    :root {
-        --font-size: 88%;
-    }
-}
+
