@@ -544,6 +544,19 @@ a {
     :root {
         --font-size: 90%;
     }
+
+    .kontakt .kontakt__container {
+        flex-direction: column;
+    }
+
+    .kontakt .kontakt__container .kontakt__map {
+        order: 2;
+    }
+
+    .kontakt .kontakt__container .kontakt__connect {
+        margin-bottom: 1em;
+        order: 1;
+    }
 }
 
 @media (max-width: 750px) {
@@ -567,5 +580,11 @@ a {
         -ms-flex-order: 2;
         order: 2;
         margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --font-size: 85%;
     }
 }
