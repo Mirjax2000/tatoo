@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* --- typography --- */
 @font-face {
     font-family: "Corinthia";
@@ -45,6 +52,7 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: var(--font-size);
 }
@@ -210,20 +218,31 @@ img {
 }
 
 .select_none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .back__gradient {
     background: var(--clr-primary);
+    background: -o-linear-gradient(
+            312deg,
+            var(--black-gradient) 0%,
+            var(--clr-primary) 60%
+    );
     background: linear-gradient(
             138deg,
             var(--black-gradient) 0%,
             var(--clr-primary) 60%
     );
+    -webkit-box-shadow: 1px 1px 4px var(--black-gradient);
     box-shadow: 1px 1px 4px var(--black-gradient);
     margin-bottom: 10px;
 
@@ -246,7 +265,11 @@ img {
     font-size: 1.3rem;
     letter-spacing: -3px;
     color: var(--clr-detail);
+    -webkit-transition: letter-spacing .1s ease-in-out, -webkit-transform .1s;
+    transition: letter-spacing .1s ease-in-out, -webkit-transform .1s;
+    -o-transition: letter-spacing .1s ease-in-out, transform .1s;
     transition: letter-spacing .1s ease-in-out, transform .1s;
+    transition: letter-spacing .1s ease-in-out, transform .1s, -webkit-transform .1s;
     cursor: pointer;
 }
 
@@ -312,10 +335,19 @@ a {
     position: sticky;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     min-height: 60px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     z-index: 1;
 }
@@ -328,8 +360,14 @@ a {
 }
 
 .navbar__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-right: .5em;
 }
@@ -337,6 +375,8 @@ a {
 .navbar__list--item a {
     padding-inline: 0.5em;
     margin-inline: 1em;
+    -webkit-transition: border-bottom 0.25s linear, color 0.25s linear;
+    -o-transition: border-bottom 0.25s linear, color 0.25s linear;
     transition: border-bottom 0.25s linear, color 0.25s linear;
     border-bottom: 1px solid transparent;
     cursor: pointer;
@@ -351,8 +391,14 @@ a {
 
 .hero__tattoo,
 .hero__beauty {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
     align-items: stretch;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     height: calc(50dvh - 40px);
     overflow: hidden;
@@ -361,6 +407,11 @@ a {
 
 .hero__beauty {
     background: var(--clr-second);
+    background: -o-linear-gradient(
+            312deg,
+            var(--white-gradient) 0%,
+            var(--clr-second) 60%
+    );
     background: linear-gradient(
             138deg,
             var(--white-gradient) 0%,
@@ -373,6 +424,8 @@ a {
 .hero__beauty--content,
 .hero__tattoo--image,
 .hero__beauty--image {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     margin: 1.3em;
 }
@@ -408,14 +461,28 @@ a {
     left: 0;
     right: 0;
     height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+    -webkit-box-shadow: 1px 0 2px black;
     box-shadow: 1px 0 2px black;
+    -webkit-transition: background-color 0.25s, -webkit-box-shadow 0.25s;
+    transition: background-color 0.25s, -webkit-box-shadow 0.25s;
+    -o-transition: background-color 0.25s, box-shadow 0.25s;
     transition: background-color 0.25s, box-shadow 0.25s;
+    transition: background-color 0.25s, box-shadow 0.25s, -webkit-box-shadow 0.25s;
     z-index: 100;
 }
 
@@ -439,12 +506,19 @@ a {
 
 .hero__tattoo--image .image__banner--top:hover,
 .hero__beauty--image .image__banner--bottom:hover {
+    -webkit-transition: -webkit-box-shadow 0.1s;
+    transition: -webkit-box-shadow 0.1s;
+    -o-transition: box-shadow 0.1s;
     transition: box-shadow 0.1s;
+    transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+    -webkit-box-shadow: 2px 1px 4px #060012ea;
     box-shadow: 2px 1px 4px #060012ea;
 }
 
 .hero__beauty--image .image__banner--bottom:hover .marker,
 .hero__tattoo--image .image__banner--top:hover .marker {
+    -webkit-transform: translateX(2px);
+    -ms-transform: translateX(2px);
     transform: translateX(2px);
     text-shadow: 1px 1px 2px gold;
 }
@@ -466,13 +540,17 @@ a {
 
 .hero__tattoo--image .image__banner--top:active,
 .hero__beauty--image .image__banner--bottom:active {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
     transform: translateY(1px);
+    -webkit-box-shadow: 1px 0 2px #060012ea;
     box-shadow: 1px 0 2px #060012ea;
 }
 
 .wrapper__tattoo .gallery__content img,
 .wrapper__beauty .gallery__content img {
     border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 4px rgb(0, 0, 0);
     box-shadow: 1px 1px 4px rgb(0, 0, 0);
     cursor: pointer;
     padding: 0.1rem;
@@ -509,6 +587,8 @@ a {
     .navbar {
         margin: 0;
         min-height: 40px;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
     }
 
@@ -518,10 +598,15 @@ a {
 
     .hero__tattoo,
     .hero__beauty {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         height: calc(100svh - 50px);
         min-height: 42em;
         padding-inline: 3em;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
 
@@ -531,13 +616,19 @@ a {
 
     .hero__tattoo--content,
     .hero__beauty--content {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
         margin-bottom: 0;
     }
 
     .hero__tattoo--image,
     .hero__beauty--image {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
         order: 2;
+        -webkit-box-flex: 5;
+        -ms-flex: 5;
         flex: 5;
         min-height: 22em;
         margin-top: 0;
@@ -575,25 +666,37 @@ a {
 
 
     .home .container .navbar {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         text-align: center;
     }
 
     .home .container .navbar .navbar__list {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
         padding-block: 1em;
     }
 
     .home .container .navbar .navbar__brand {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
         order: 2;
     }
 
     .hero__tattoo,
     .hero__beauty {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         height: calc(100svh - 90px);
         min-height: 42em;
         padding-inline: 3em;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
 
@@ -603,13 +706,19 @@ a {
 
     .hero__tattoo--content,
     .hero__beauty--content {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
         margin-bottom: 0;
     }
 
     .hero__tattoo--image,
     .hero__beauty--image {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
         order: 2;
+        -webkit-box-flex: 5;
+        -ms-flex: 5;
         flex: 5;
         min-height: 22em;
         margin-top: 0;
@@ -632,6 +741,9 @@ a {
 
     .hero__tattoo,
     .hero__beauty {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding-inline: 1em;
     }
@@ -640,6 +752,8 @@ a {
     .hero__beauty--image,
     .hero__tattoo--content,
     .hero__beauty--content {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
         margin: .8em;
     }
@@ -652,13 +766,20 @@ a {
 
     .hero__tattoo,
     .hero__beauty {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding-inline: 0;
     }
 
     .hero__tattoo--image,
     .hero__beauty--image {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
         order: 2;
+        -webkit-box-flex: 5;
+        -ms-flex: 5;
         flex: 5;
         min-height: 21em;
         margin-top: 0;
@@ -669,5 +790,4 @@ a {
         background-position-y: 35%;
     }
 }
-
 
