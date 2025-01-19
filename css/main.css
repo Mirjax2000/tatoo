@@ -559,12 +559,15 @@ a {
 /* cookies */
 .cookie{
     position: absolute;
-    bottom: 13px;
-    left: 15%;
-    right:15%;
+    bottom: 1rem;
+    width: clamp(var(--container-min), 100%, var(--container-max));
+    margin-inline: auto;
     display: none;
+    z-index: 100;
 }
 .cookie__container{
+    width: 70%;
+    margin-inline: auto;
     text-align: center;
     padding: 1.5em 1em;
     background: #363636f3;
@@ -586,6 +589,8 @@ a {
 .cookie__btn--ano{
     background-color: #54725a;
     color: white;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.62);
 }
 .cookie__btn--ano:hover,.cookie__btn--ano:focus{
     background-color: #14882b;
@@ -600,11 +605,10 @@ a {
 .cookie__btn--ne:hover, .cookie__btn--ne:focus{
     color: white;
 }
+/* --------------------- */
 
 
 /* mediaqueries */
-
-
 @media (max-height: 880px) {
     :root {
         --font-size: 90%;
@@ -626,12 +630,10 @@ a {
         height: calc(100dvh - 70px);
     }
     .cookie{
+        position: fixed;
+        top: 5rem;
         bottom: auto;
-        top:70px;
-        left: 0;
-        right:0;
     }
-
 }
 
 @media (max-height: 500px) {
@@ -643,7 +645,7 @@ a {
         -ms-flex-pack: end;
         justify-content: flex-end;
     }
-
+    
     .navbar .navbar__brand {
         display: none;
     }
@@ -712,10 +714,9 @@ a {
     .break__line {
         display: none;
     }
-    .cookie{
-        bottom: 10px;
-        left: 0;
-        right:0;
+
+    .cookie__container{
+        width: 100%;
     }
 }
 
@@ -791,9 +792,10 @@ a {
         font-size: 2rem;
     }
     .cookie{
-        top: 6.375rem  ;
+        position: fixed;
+        top: 5.6875rem;
+        bottom: auto;
     }
-
 }
 
 @media (max-width: 600px) {

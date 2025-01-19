@@ -20,12 +20,12 @@ $(function () {
     $(`#${targetId}`).fadeToggle(300);
   });
 
-  
+
 
   if (!localStorage.getItem('cookiesAccepted')) {
     setTimeout(function () {
       cookieBanner.slideDown(1000);
-    }, 2000);
+    }, 1000);
   }
 
   btnAno.on("click", function () {

@@ -515,7 +515,59 @@ a {
     background-size: cover;
 }
 
-@media (max-height: 800px) {
+
+/* cookies */
+.cookie{
+    position: absolute;
+    bottom: 1rem;
+    width: clamp(var(--container-min), 100%, var(--container-max));
+    margin-inline: auto;
+    display: none;
+    z-index: 100;
+}
+.cookie__container{
+    width: 70%;
+    margin-inline: auto;
+    text-align: center;
+    padding: 1.5em 1em;
+    background: #363636f3;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    border: 1px solid rgb(108, 108, 108);
+    user-select: none;
+}
+.cookie__content{
+    margin-bottom: 1em;
+}
+.cookie__btns > *{
+    display: inline-block;
+    padding: 1em;
+    cursor: pointer;
+    transition: .1s ease-in-out color, .1s ease-in-out background-color;
+}
+
+.cookie__btn--ano{
+    background-color: #54725a;
+    color: white;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.62);
+}
+.cookie__btn--ano:hover,.cookie__btn--ano:focus{
+    background-color: #14882b;
+    color: white;
+}
+.cookie__btn--ne{
+    text-decoration: underline;
+}
+.cookie__btn--ne:active,.cookie__btn--ano:active{
+    transform: scale(.99);
+}
+.cookie__btn--ne:hover, .cookie__btn--ne:focus{
+    color: white;
+}
+/* --------------------- */
+
+@media (max-height: 900px) {
     :root {
         --font-size: 90%;
     }
@@ -523,9 +575,17 @@ a {
     .gallery .container .layer {
         align-items: flex-start;
     }
+    .cookie{
+        position: fixed;
+        bottom:auto;
+        top: 5rem;
+    }
 }
 
 @media (max-height: 500px) {
+    .cookie{
+        top: 3rem;
+    }
 
     .navbar {
         margin: 0;
@@ -547,6 +607,14 @@ a {
 }
 
 @media (max-width: 730px) {
+    .cookie{
+        position:fixed;
+        bottom: auto;
+        top: 6rem;
+    }
+    .cookie__container{
+        width: 100%;
+    }
     .gallery .container .navbar {
         flex-direction: column;
         text-align: center;
