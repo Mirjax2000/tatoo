@@ -566,18 +566,19 @@ a {
 }
 .cookie__container{
     text-align: center;
-    padding: .5em;
-    background: #3c3c3cf3;
+    padding: 1.5em 1em;
+    background: #363636f3;
     border-radius: 5px;
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 5px black;
+    border: 1px solid rgb(108, 108, 108);
     user-select: none;
 }
 .cookie__content{
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 .cookie__btns > *{
     display: inline-block;
-    padding: .5em;
+    padding: 1em;
     cursor: pointer;
     transition: .1s ease-in-out color, .1s ease-in-out background-color;
 }

@@ -1,8 +1,3 @@
-// izolace jQuery
-// -----------------
-// (function ($) {})(jQuery);
-// $(function () {});
-// -----------------
 
 $(function () {
   const listItem = $("#cenik__list").find(".cenik__list--item");
