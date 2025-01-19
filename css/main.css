@@ -626,8 +626,8 @@ a {
         height: calc(100dvh - 70px);
     }
     .cookie{
-        position: absolute;
-        bottom: 13px;
+        bottom: auto;
+        top:70px;
         left: 0;
         right:0;
     }
@@ -713,8 +713,7 @@ a {
         display: none;
     }
     .cookie{
-        position: absolute;
-        bottom: 13px;
+        bottom: 10px;
         left: 0;
         right:0;
     }
@@ -790,6 +789,9 @@ a {
     .hero__tattoo--content h2,
     .hero__beauty--content h2 {
         font-size: 2rem;
+    }
+    .cookie{
+        top: 6.375rem  ;
     }
 
 }
