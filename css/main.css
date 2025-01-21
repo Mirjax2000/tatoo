@@ -27,7 +27,7 @@
 /*   --- root css --- */
 :root {
     --container-max: 64rem;
-    --container-min: 18.75rem;
+    --container-min: 21.875rem;
     --font-size: 100%;
     --H1: 2.5rem;
     --H2: 2.9rem;
@@ -278,7 +278,7 @@ img {
 }
 
 .container {
-    width: clamp(var(--container-min), 100%, var(--container-max));
+    width: clamp(335px, 100%, var(--container-max));
     position: relative;
     margin: 0 auto;
 }
@@ -616,6 +616,7 @@ a {
 }
 
 @media (max-height: 790px) {
+    #covers{display: none;}
     .hero__tattoo,
     .hero__beauty {
         overflow: hidden;
@@ -637,6 +638,7 @@ a {
 }
 
 @media (max-height: 500px) {
+    
 
     .navbar {
         margin: 0;
@@ -800,7 +802,6 @@ a {
 
 @media (max-width: 600px) {
 
-
     .hero__tattoo,
     .hero__beauty {
         -webkit-box-orient: vertical;
@@ -825,6 +826,7 @@ a {
     :root {
         --font-size: 88%;
     }
+    #covers{display: none;}
 
     .hero__tattoo,
     .hero__beauty {
@@ -843,7 +845,7 @@ a {
         -webkit-box-flex: 5;
         -ms-flex: 5;
         flex: 5;
-        min-height: 21em;
+        min-height: 19em;
         margin-top: 0;
         background-position-y: 20%;
     }
