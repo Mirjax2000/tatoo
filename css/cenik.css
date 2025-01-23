@@ -469,6 +469,22 @@ a {
   padding-bottom: .4em;
 }
 
+.poukaz .poukaz__container {
+  display: flex;
+  gap: 2%;
+}
+ .poukaz .poukaz__content {
+  text-align: center;
+  padding-block: 1em;
+  background-color:#1e1e1e;
+  margin-bottom: .7em;
+ }
+
+.poukaz .poukaz__container img{
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black;
+}
+
 /* cookies */
 .cookie{
   position: absolute;

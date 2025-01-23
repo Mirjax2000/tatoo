@@ -27,7 +27,7 @@
 /*   --- root css --- */
 :root {
     --container-max: 64rem;
-    --container-min: 21.875rem;
+    --container-min: 23rem;
     --font-size: 100%;
     --H1: 2.5rem;
     --H2: 2.9rem;
@@ -278,7 +278,7 @@ img {
 }
 
 .container {
-    width: clamp(335px, 100%, var(--container-max));
+    width: clamp(var(--container-min), 100%, var(--container-max));
     position: relative;
     margin: 0 auto;
 }
