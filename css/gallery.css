@@ -407,6 +407,8 @@ a {
 
 .gallery__wrapper {
   position: relative;
+  height: calc(80dvh);
+  overflow-y: auto;
 }
 
 .gallery__wrapper .tattoo__list,
