@@ -3,9 +3,9 @@
     font-family: "Corinthia";
     src: url("../assets/webfonts/Font-face/Corinthia-Regular.woff2") format("woff2"),
     url("../assets/webfonts/Font-face/Corinthia-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -230,8 +230,9 @@ img {
 }
 
 .gallery {
-    background-color: var(--clr-body);
-    color: var(--clr-font);
+  background-color: var(--clr-body);
+  color: var(--clr-font);
+  opacity: 1;
 }
 
 
