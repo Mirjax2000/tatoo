@@ -407,7 +407,7 @@ a {
 
 .gallery__wrapper {
   position: relative;
-  height: calc(80dvh);
+  height: calc(80dvh - 50px);
   overflow-y: auto;
 }
 
