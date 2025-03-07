@@ -233,6 +233,7 @@ img {
 .gallery {
   background-color: var(--clr-body);
   color: var(--clr-font);
+  opacity: 1;
 }
 
 .break__line {

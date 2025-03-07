@@ -50,6 +50,7 @@
     <link href="./assets/fontAwesome_css/fontawesome.min.css" rel="prefetch" />
     <link href="./assets/fontAwesome_css/brands.min.css" rel="prefetch" />
     <link href="./assets/fontAwesome_css/solid.min.css" rel="prefetch" />
+    <!--  -->
     <style>
         /* --- typography --- */
         @font-face {
@@ -67,7 +68,18 @@
             font-weight: 400;
             font-style: normal;
         }
+
+        body {
+            opacity: 0;
+            transition: opacity .1s ease-in-out;
+        }
     </style>
+    <!-- FOUT -->
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- no js -->
+    <noscript>
+        <link rel="stylesheet" href="css/main.css">
+    </noscript>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-132KB8NMEL"></script>

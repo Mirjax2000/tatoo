@@ -7,8 +7,9 @@
 
 @font-face {
   font-family: "Corinthia";
-  src: url("../assets/webfonts/Font-face/Corinthia-Regular.woff2") format("woff2"),
-  url("../assets/webfonts/Font-face/Corinthia-Regular.ttf") format("truetype");
+  src:
+    url("../assets/webfonts/Font-face/Corinthia-Regular.woff2") format("woff2"),
+    url("../assets/webfonts/Font-face/Corinthia-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,8 +17,9 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../assets/webfonts/Font-face/OpenSans-Regular.woff2") format("woff2"),
-  url("../assets/webfonts/Font-face/OpenSans-Regular.ttf") format("truetype");
+  src:
+    url("../assets/webfonts/Font-face/OpenSans-Regular.woff2") format("woff2"),
+    url("../assets/webfonts/Font-face/OpenSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -226,14 +228,14 @@ img {
 .back__gradient {
   background: var(--clr-primary);
   background: -o-linear-gradient(
-          312deg,
-          var(--black-gradient) 0%,
-          var(--clr-primary) 60%
+    312deg,
+    var(--black-gradient) 0%,
+    var(--clr-primary) 60%
   );
   background: linear-gradient(
-          138deg,
-          var(--black-gradient) 0%,
-          var(--clr-primary) 60%
+    138deg,
+    var(--black-gradient) 0%,
+    var(--clr-primary) 60%
   );
   -webkit-box-shadow: 1px 1px 4px var(--black-gradient);
   box-shadow: 1px 1px 4px var(--black-gradient);
@@ -243,6 +245,7 @@ img {
 .cenik {
   background-color: var(--clr-body);
   color: var(--clr-font);
+  opacity: 1;
 }
 
 .break__line {
@@ -256,11 +259,22 @@ img {
   font-size: 1.3rem;
   letter-spacing: -3px;
   color: var(--clr-detail);
-  -webkit-transition: letter-spacing .1s ease-in-out, -webkit-transform .1s;
-  transition: letter-spacing .1s ease-in-out, -webkit-transform .1s;
-  -o-transition: letter-spacing .1s ease-in-out, transform .1s;
-  transition: letter-spacing .1s ease-in-out, transform .1s;
-  transition: letter-spacing .1s ease-in-out, transform .1s, -webkit-transform .1s;
+  -webkit-transition:
+    letter-spacing 0.1s ease-in-out,
+    -webkit-transform 0.1s;
+  transition:
+    letter-spacing 0.1s ease-in-out,
+    -webkit-transform 0.1s;
+  -o-transition:
+    letter-spacing 0.1s ease-in-out,
+    transform 0.1s;
+  transition:
+    letter-spacing 0.1s ease-in-out,
+    transform 0.1s;
+  transition:
+    letter-spacing 0.1s ease-in-out,
+    transform 0.1s,
+    -webkit-transform 0.1s;
   cursor: pointer;
 }
 
@@ -308,7 +322,8 @@ h3 {
   line-height: 1.6;
 }
 
-p, a {
+p,
+a {
   font-family: "Open Sans", sans-serif;
   color: var(--clr-font);
 }
@@ -348,7 +363,7 @@ a {
   font-family: "Corinthia", cursive;
   font-size: var(--H1);
   font-weight: 400;
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .navbar__list {
@@ -361,15 +376,21 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 .navbar__list--item a {
   padding-inline: 0.5em;
   margin-inline: 1em;
-  -webkit-transition: border-bottom 0.25s linear, color 0.25s linear;
-  -o-transition: border-bottom 0.25s linear, color 0.25s linear;
-  transition: border-bottom 0.25s linear, color 0.25s linear;
+  -webkit-transition:
+    border-bottom 0.25s linear,
+    color 0.25s linear;
+  -o-transition:
+    border-bottom 0.25s linear,
+    color 0.25s linear;
+  transition:
+    border-bottom 0.25s linear,
+    color 0.25s linear;
   border-bottom: 1px solid transparent;
   cursor: pointer;
 }
@@ -380,11 +401,9 @@ a {
   color: white;
 }
 
-
 .cenik__header h2 {
   text-align: center;
 }
-
 
 .section__cenik .cenik__list .cenik__list--item {
   padding: 1em 2em;
@@ -462,31 +481,31 @@ a {
   -ms-flex-preferred-size: 30%;
   flex-basis: 30%;
   padding-left: 1em;
-  padding-top: .3em;
+  padding-top: 0.3em;
 }
 
 .section__cenik .cenik__list .cenik__list--item .service__list--tetovani li {
-  padding-bottom: .4em;
+  padding-bottom: 0.4em;
 }
 
 .poukaz .poukaz__container {
   display: flex;
   gap: 2%;
 }
- .poukaz .poukaz__content {
+.poukaz .poukaz__content {
   text-align: center;
   padding-block: 1em;
-  background-color:#1e1e1e;
-  margin-bottom: .7em;
- }
+  background-color: #1e1e1e;
+  margin-bottom: 0.7em;
+}
 
-.poukaz .poukaz__container img{
+.poukaz .poukaz__container img {
   border-radius: 5px;
   box-shadow: 1px 1px 5px black;
 }
 
 /* cookies */
-.cookie{
+.cookie {
   position: absolute;
   bottom: 1rem;
   width: clamp(var(--container-min), 100%, var(--container-max));
@@ -494,7 +513,7 @@ a {
   display: none;
   z-index: 100;
 }
-.cookie__container{
+.cookie__container {
   width: 70%;
   margin-inline: auto;
   text-align: center;
@@ -505,33 +524,38 @@ a {
   border: 1px solid rgb(108, 108, 108);
   user-select: none;
 }
-.cookie__content{
+.cookie__content {
   margin-bottom: 1em;
 }
-.cookie__btns > *{
+.cookie__btns > * {
   display: inline-block;
   padding: 1em;
   cursor: pointer;
-  transition: .1s ease-in-out color, .1s ease-in-out background-color;
+  transition:
+    0.1s ease-in-out color,
+    0.1s ease-in-out background-color;
 }
 
-.cookie__btn--ano{
+.cookie__btn--ano {
   background-color: #54725a;
   color: white;
   border-radius: 2px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.62);
 }
-.cookie__btn--ano:hover,.cookie__btn--ano:focus{
+.cookie__btn--ano:hover,
+.cookie__btn--ano:focus {
   background-color: #14882b;
   color: white;
 }
-.cookie__btn--ne{
+.cookie__btn--ne {
   text-decoration: underline;
 }
-.cookie__btn--ne:active,.cookie__btn--ano:active{
-  transform: scale(.99);
+.cookie__btn--ne:active,
+.cookie__btn--ano:active {
+  transform: scale(0.99);
 }
-.cookie__btn--ne:hover, .cookie__btn--ne:focus{
+.cookie__btn--ne:hover,
+.cookie__btn--ne:focus {
   color: white;
 }
 /* --------------------- */
@@ -543,14 +567,13 @@ a {
 }
 
 @media (max-height: 500px) {
-  .cookie{
+  .cookie {
     position: fixed;
     bottom: auto;
     top: 3rem;
-
   }
-  .cookie__container{
-    width:100%;
+  .cookie__container {
+    width: 100%;
   }
 
   .navbar {
@@ -565,7 +588,6 @@ a {
     display: none;
   }
 }
-
 
 @media (max-width: 950px) {
   :root {
@@ -590,17 +612,15 @@ a {
     bottom: auto;
     top: 4rem;
   }
-  .cookie__container{
+  .cookie__container {
     width: 100%;
   }
-
 }
 
 @media (max-width: 730px) {
-  .cookie{
-    top:6rem;
+  .cookie {
+    top: 6rem;
   }
-
 
   .cenik .container .navbar {
     -webkit-box-orient: vertical;
@@ -637,20 +657,19 @@ a {
 
   .section__cenik .cenik__list .cenik__list--item .marker__wrapper h2 {
     font-size: calc((var(--H2) - 1.3em));
-    padding-left: .5em;
+    padding-left: 0.5em;
   }
 
   .section__cenik .cenik__list .service__container {
     min-width: 200px;
-    padding-right: .5em
+    padding-right: 0.5em;
   }
 
   .section__cenik .cenik__list .price {
-    padding-left: .8em
+    padding-left: 0.8em;
   }
 
   .section__cenik .cenik__list .cenik__list--item {
     padding-inline: 1em;
   }
 }
-
