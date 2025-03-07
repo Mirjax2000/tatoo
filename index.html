@@ -34,9 +34,9 @@
 
     <link href="css/main.css" rel="stylesheet" />
 
-    <link as="font" crossorigin="anonymous" href="./assets/webfonts/fa-brands-400.woff2" rel="prefetch"
+    <link as="font" crossorigin="anonymous" href="./assets/webfonts/fa-brands-400.woff2" rel="preload"
         type="font/woff2" />
-    <link as="font" crossorigin="anonymous" href="./assets/webfonts/fa-solid-900.woff2" rel="prefetch"
+    <link as="font" crossorigin="anonymous" href="./assets/webfonts/fa-solid-900.woff2" rel="preload"
         type="font/woff2" />
     <link href="./cenik.html" rel="prefetch" />
     <link href="./gallery.html" rel="prefetch" />
@@ -67,7 +67,18 @@
             font-weight: 400;
             font-style: normal;
         }
+
+        body {
+            opacity: 0;
+            transition: opacity .1s ease-in;
+        }
     </style>
+    <!-- css  -->
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- no js -->
+    <noscript>
+        <link rel="stylesheet" href="css/main.css">
+    </noscript>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-132KB8NMEL"></script>
