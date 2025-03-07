@@ -4,12 +4,7 @@ $(function () {
 
     btnAno = $(".cookie__btn--ano"),
     btnNe = $(".cookie__btn--ne"),
-    // logoText = $("#logoText"),
     cookieBanner = $(".cookie");
-
-  // document.fonts.ready.then(() => {
-  //   logoText.style.opacity = "1";
-  // });
 
   const cookies = function () {
     window.dataLayer = window.dataLayer || [];
