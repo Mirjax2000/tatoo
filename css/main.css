@@ -13,7 +13,7 @@
     url("../assets/webfonts/Font-face/Corinthia-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -370,6 +370,7 @@ a {
   font-size: var(--H1);
   font-weight: 400;
   margin-left: 0.5em;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar__list {

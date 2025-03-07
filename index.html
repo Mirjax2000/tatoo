@@ -26,13 +26,12 @@
     <link rel="canonical" href="https://www.ak-tattooabeauty.cz/" />
 
     <link as="font" crossorigin="anonymous" href="./assets/webfonts/Font-face/Corinthia-Regular.woff2" rel="preload"
-        type="font/woff2" />
+        type="font/woff2" importance="high" />
     <link as="font" crossorigin="anonymous" href="./assets/webfonts/Font-face/OpenSans-Regular.woff2" rel="preload"
         type="font/woff2" />
+    <!--  -->
     <link as="image" href="./assets/img/IMG_9335_small.webp" rel="preload" />
     <link as="image" href="./assets/img/IMG_9337_small.webp" rel="preload" />
-
-    <link href="css/main.css" rel="stylesheet" />
 
     <link as="font" crossorigin="anonymous" href="./assets/webfonts/fa-brands-400.woff2" rel="prefetch"
         type="font/woff2" />
@@ -59,6 +58,7 @@
                 url("./assets/webfonts/Font-face/Corinthia-Regular.ttf") format("truetype");
             font-weight: 400;
             font-style: normal;
+            font-display: block;
         }
 
         @font-face {
@@ -67,11 +67,12 @@
                 url("/assets/webfonts/Font-face/OpenSans-Regular.ttf") format("truetype");
             font-weight: 400;
             font-style: normal;
+            font-display: swap;
         }
 
         body {
             opacity: 0;
-            transition: opacity .1s ease-in-out;
+            transition: opacity .2s ease-in-out;
         }
     </style>
     <!-- FOUT -->
