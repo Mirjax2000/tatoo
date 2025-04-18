@@ -1,20 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>AK Tatoo Beauty | gallery</title>
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta
-        content="Profesionální tetovací a kosmetické služby v našem salonu. Nabízíme širokou nabídku tetování, kosmetiky, péče o řasy, make-upu a vizážistiky. Vytvořte si své jedinečné tetování nebo si dopřejte profesionální kosmetickou péči u nás!"
-        name="description" />
+      content="Profesionální tetovací a kosmetické služby v našem salonu. Nabízíme širokou nabídku tetování, kosmetiky, péče o řasy, make-upu a vizážistiky. Vytvořte si své jedinečné tetování nebo si dopřejte profesionální kosmetickou péči u nás!"
+      name="description"
+    />
     <meta
-        content="tetovací salon, tetování, tetovací služby, tetování na míru, tetování pro ženy, tetování pro muže, kvalitní tetování, odborníci na tetování, kreativní tetování, kosmetika, řasy, prodlužování řas, make-up, vizážistika, péče o pleť"
-        name="keywords" />
+      content="tetovací salon, tetování, tetovací služby, tetování na míru, tetování pro ženy, tetování pro muže, kvalitní tetování, odborníci na tetování, kreativní tetování, kosmetika, řasy, prodlužování řas, make-up, vizážistika, péče o pleť"
+      name="keywords"
+    />
     <!-- zadej jmeno autora -->
     <meta content="Miroslav Viktorin" name="author" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="./assets/fontAwesome_css/fontawesome.min.css" rel="stylesheet" />
+    <link
+      href="./assets/fontAwesome_css/fontawesome.min.css"
+      rel="stylesheet"
+    />
     <link href="./assets/fontAwesome_css/brands.min.css" rel="stylesheet" />
     <link href="./assets/fontAwesome_css/solid.min.css" rel="stylesheet" />
     <link href="css/gallery.css" rel="stylesheet" />
@@ -72,401 +76,615 @@
     <link as="image" href="./assets/img/beauty/IMG_7250.webp" rel="prefetch" />
     <link as="image" href="./assets/img/beauty/IMG_7251.webp" rel="prefetch" />
     <link as="image" href="./assets/img/beauty/IMG_7252.webp" rel="prefetch" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-132KB8NMEL"
+  ></script>
+  <script src="./js/cookies.js"></script>
 
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-132KB8NMEL"></script>
-<script src="./js/cookies.js">
-
-</script>
-
-<body class="gallery">
+  <body class="gallery">
     <main class="container">
-        <div class="layer black__hole" id="layer">
-            <div class="layer__wrapper">
-                <div class="layer__close">
-                    <p id="alt__text"></p>
-                    <i class="fa-regular fa-circle-xmark fa-2x icon" id="close_icon"></i>
-                </div>
-                <div class="inner__layer">
-                    <div class="marker" id="inner__left">&lt;&lt;&lt;
-                    </div>
-                    <div class="inner__mid" id="inner__mid"></div>
-                    <div class="marker" id="inner__right">&gt;&gt;&gt;
-                    </div>
-                </div>
-            </div>
-
+      <div class="layer black__hole" id="layer">
+        <div class="layer__wrapper">
+          <div class="layer__close">
+            <p id="alt__text"></p>
+            <i
+              class="fa-regular fa-circle-xmark fa-2x icon"
+              id="close_icon"
+            ></i>
+          </div>
+          <div class="inner__layer">
+            <div class="marker" id="inner__left">&lt;&lt;&lt;</div>
+            <div class="inner__mid" id="inner__mid"></div>
+            <div class="marker" id="inner__right">&gt;&gt;&gt;</div>
+          </div>
         </div>
-        <nav aria-label="Hlavní navigace" class="navbar back__gradient">
-            <a href="./index.html" class="navbar__brand">AK&nbsp;&nbsp;Tattoo&nbsp;&nbsp;&amp;&nbsp;Beauty</a>
+      </div>
+      <nav aria-label="Hlavní navigace" class="navbar back__gradient">
+        <a href="./index.html" class="navbar__brand"
+          >AK&nbsp;&nbsp;Tattoo&nbsp;&nbsp;&amp;&nbsp;Beauty</a
+        >
 
-            <ul class="navbar__list">
-                <li class="navbar__list--item">
-                    <a href="./index.html">služby</a>
+        <ul class="navbar__list">
+          <li class="navbar__list--item">
+            <a href="./index.html">služby</a>
+          </li>
+
+          <li class="navbar__list--item">
+            <a href="./cenik.html">ceník</a>
+          </li>
+
+          <li class="navbar__list--item">
+            <a class="active" href="./gallery.html">galerie</a>
+          </li>
+
+          <li class="navbar__list--item">
+            <a href="./blog.html">blog</a>
+          </li>
+
+          <li class="navbar__list--item">
+            <a href="./kurz.html">kurz</a>
+          </li>
+
+          <li class="navbar__list--item">
+            <a href="./kontakt.html?v=1.0.0">kontakt</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="gallery select_none" id="gallery">
+        <div class="gallery__container">
+          <nav
+            aria-label="Navigace pro galerii"
+            class="gallery__navigation back__gradient"
+          >
+            <header class="gallery__header">
+              <h2>Galerie</h2>
+            </header>
+          </nav>
+          <!--Gallery navbar -->
+          <ul class="gallery__list">
+            <li class="gallery__list--item">
+              <a class="switcher active">tattoo</a>
+            </li>
+            <li class="gallery__list--item">
+              <a class="switcher">beauty</a>
+            </li>
+          </ul>
+
+          <div>
+            <div class="gallery__wrapper" id="gallery__wrapper">
+              <!--tattoo list-->
+              <ul class="tattoo__list" id="tattoo__list">
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Tetovaní na temeno"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_0001_thumb.webp"
+                      width="320"
+                    />
+                  </div>
                 </li>
-
-                <li class="navbar__list--item">
-                    <a href="./cenik.html">ceník</a>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tetovaní na ruku - anděl"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_0002_thumb.webp"
+                      width="320"
+                    />
+                  </div>
                 </li>
-
-                <li class="navbar__list--item">
-                    <a class="active" href="./gallery.html">galerie</a>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tattoo preview"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_2759_thumb.webp"
+                      width="320"
+                    />
+                  </div>
                 </li>
-
-                <li class="navbar__list--item">
-                    <a href="./kontakt.html?v=1.0.0">kontakt</a>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tattoo preview"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_2211_thumb.webp"
+                      width="320"
+                    />
+                  </div>
                 </li>
-            </ul>
-        </nav>
-
-        <section class="gallery select_none" id="gallery">
-            <div class="gallery__container">
-                <nav aria-label="Navigace pro galerii" class="gallery__navigation back__gradient">
-                    <header class="gallery__header">
-                        <h2>Galerie</h2>
-                    </header>
-                </nav>
-                <!--Gallery navbar -->
-                <ul class="gallery__list">
-                    <li class="gallery__list--item">
-                        <a class="switcher active">tattoo</a>
-                    </li>
-                    <li class="gallery__list--item">
-                        <a class="switcher">beauty</a>
-                    </li>
-                </ul>
-
-                <div>
-                    <div class="gallery__wrapper" id="gallery__wrapper">
-                        <!--tattoo list-->
-                        <ul class="tattoo__list" id="tattoo__list">
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Tetovaní na temeno" height="320"
-                                        src="./assets/img/tattoo/IMG_0001_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tetovaní na ruku - anděl" height="320"
-                                        src="./assets/img/tattoo/IMG_0002_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tattoo preview" height="320" src="./assets/img/tattoo/IMG_2759_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tattoo preview" height="320" src="./assets/img/tattoo/IMG_2211_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tetování na rameno, barevný motýl" height="320"
-                                        src="./assets/img/tattoo/IMG_3223_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tetování okamžiky života" height="320"
-                                        src="./assets/img/tattoo/IMG_3543_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tattoo preview" height="320" src="./assets/img/tattoo/IMG_3606_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tattoo preview" height="320" src="./assets/img/tattoo/IMG_3923_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tattoo preview" height="320" src="./assets/img/tattoo/IMG_4200_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tattoo preview" height="320" src="./assets/img/tattoo/IMG_4709_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tattoo preview" height="320" src="./assets/img/tattoo/IMG_7901_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="tattoo preview" height="320" src="./assets/img/tattoo/IMG_7915_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <!-- update_I -->
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Old skool: Familia" height="320"
-                                        src="./assets/img/tattoo/IMG_2002_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Water color: Vlastní návrh" height="320"
-                                        src="./assets/img/tattoo/IMG_5902_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Sans Serif: Cest la vie" height="320"
-                                        src="./assets/img/tattoo/IMG_5937_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Abstract: For luck" height="320"
-                                        src="./assets/img/tattoo/IMG_5335_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Line work: Abloom bracelet" height="320"
-                                        src="./assets/img/tattoo/IMG_6372_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Lettering: O dragones" height="320"
-                                        src="./assets/img/tattoo/IMG_5996_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Scorpion" height="320" src="./assets/img/tattoo/IMG_6366_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Minimalist: Flower" height="320"
-                                        src="./assets/img/tattoo/IMG_7034_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Lettering" height="320" src="./assets/img/tattoo/IMG_6386_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <!-- update II -->
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8572_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8504_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8469_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8405_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8400_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8343_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8318_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8238_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="tattoo__list--item">
-                                <div class="gallery__content">
-                                    <img alt="" height="320" src="./assets/img/tattoo/IMG_8146_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                        </ul>
-                        <!--beauty list-->
-                        <ul class="black__hole beauty__list" id="beauty__list">
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5114_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5127_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5126_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5125_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5124_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5122_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5121_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5120_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5119_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5118_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5117_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="beauty preview" height="320" src="./assets/img/beauty/IMG_5116_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <!-- update_I -->
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Hybrid: 5D-D-8-10mm" height="320"
-                                        src="./assets/img/beauty/IMG_7245_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Cat eye: 3D-C-7-10mm" height="320"
-                                        src="./assets/img/beauty/IMG_7246_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Classic: 1:1-C-7-10mm" height="320"
-                                        src="./assets/img/beauty/IMG_7247_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Classic: 1:1-C-8-11-10mm" height="320"
-                                        src="./assets/img/beauty/IMG_7248_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Cat eye: 3D-C-7-10mm" height="320"
-                                        src="./assets/img/beauty/IMG_7249_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Cat eye: " height="320" src="./assets/img/beauty/IMG_7250_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Cat eye: " height="320" src="./assets/img/beauty/IMG_7251_thumb.webp"
-                                        width="320" />
-                                </div>
-                            </li>
-                            <li class="beauty__list--item">
-                                <div class="gallery__content">
-                                    <img alt="Cat eye: 3D-C-7-10mm " height="320"
-                                        src="./assets/img/beauty/IMG_7252_thumb.webp" width="320" />
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tetování na rameno, barevný motýl"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_3223_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tetování okamžiky života"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_3543_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tattoo preview"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_3606_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tattoo preview"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_3923_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tattoo preview"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_4200_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tattoo preview"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_4709_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tattoo preview"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_7901_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="tattoo preview"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_7915_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <!-- update_I -->
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Old skool: Familia"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_2002_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Water color: Vlastní návrh"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_5902_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Sans Serif: Cest la vie"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_5937_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Abstract: For luck"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_5335_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Line work: Abloom bracelet"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_6372_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Lettering: O dragones"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_5996_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Scorpion"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_6366_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Minimalist: Flower"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_7034_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Lettering"
+                      height="320"
+                      src="./assets/img/tattoo/IMG_6386_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <!-- update II -->
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8572_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8504_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8469_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8405_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8400_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8343_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8318_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8238_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="tattoo__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt=""
+                      height="320"
+                      src="./assets/img/tattoo/IMG_8146_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+              </ul>
+              <!--beauty list-->
+              <ul class="black__hole beauty__list" id="beauty__list">
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5114_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5127_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5126_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5125_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5124_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5122_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5121_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5120_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5119_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5118_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5117_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="beauty preview"
+                      height="320"
+                      src="./assets/img/beauty/IMG_5116_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <!-- update_I -->
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Hybrid: 5D-D-8-10mm"
+                      height="320"
+                      src="./assets/img/beauty/IMG_7245_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Cat eye: 3D-C-7-10mm"
+                      height="320"
+                      src="./assets/img/beauty/IMG_7246_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Classic: 1:1-C-7-10mm"
+                      height="320"
+                      src="./assets/img/beauty/IMG_7247_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Classic: 1:1-C-8-11-10mm"
+                      height="320"
+                      src="./assets/img/beauty/IMG_7248_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Cat eye: 3D-C-7-10mm"
+                      height="320"
+                      src="./assets/img/beauty/IMG_7249_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Cat eye: "
+                      height="320"
+                      src="./assets/img/beauty/IMG_7250_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Cat eye: "
+                      height="320"
+                      src="./assets/img/beauty/IMG_7251_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+                <li class="beauty__list--item">
+                  <div class="gallery__content">
+                    <img
+                      alt="Cat eye: 3D-C-7-10mm "
+                      height="320"
+                      src="./assets/img/beauty/IMG_7252_thumb.webp"
+                      width="320"
+                    />
+                  </div>
+                </li>
+              </ul>
             </div>
-        </section>
-        <aside class="cookie" aria-label="Cookie consent">
-            <div class="cookie__container">
-                <div class="cookie__banner">
-                    <p class="cookie__content">Tato stránka používá cookies. Kliknutím na "Souhlasím" souhlasíte s
-                        jejich používáním.</p>
-                    <div class="cookie__btns">
-                        <p class="cookie__btn--ano">Souhlasím</p>
-                        <p class="cookie__btn--ne">Nesouhlasím</p>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <aside class="cookie" aria-label="Cookie consent">
+        <div class="cookie__container">
+          <div class="cookie__banner">
+            <p class="cookie__content">
+              Tato stránka používá cookies. Kliknutím na "Souhlasím" souhlasíte
+              s jejich používáním.
+            </p>
+            <div class="cookie__btns">
+              <p class="cookie__btn--ano">Souhlasím</p>
+              <p class="cookie__btn--ne">Nesouhlasím</p>
             </div>
-        </aside>
+          </div>
+        </div>
+      </aside>
     </main>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/gallery.js"></script>
-</body>
-
+  </body>
 </html>
