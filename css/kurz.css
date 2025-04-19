@@ -368,6 +368,11 @@ a {
   line-height: 1.7;
 }
 
+.hero .invite {
+  text-align: center;
+  margin-block: 0.5em;
+}
+
 .marker__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
