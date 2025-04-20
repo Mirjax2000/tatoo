@@ -368,9 +368,13 @@ a {
   line-height: 1.7;
 }
 
-.hero .invite {
+.invite {
   text-align: center;
-  margin-block: 0.5em;
+  margin-block: 0.3em;
+  user-select: none;
+}
+.kurz__list {
+  margin-top: 0.5em;
 }
 
 .marker__wrapper {
@@ -383,6 +387,8 @@ a {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  cursor: pointer;
+  user-select: none;
 }
 .marker__wrapper .marker {
   -webkit-box-flex: 1;
@@ -521,5 +527,15 @@ a {
   }
   .cookie {
     top: 6rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .kurz {
+    font-size: 75%;
+  }
+  .kurz .invite,
+  .kurz .marker__wrapper h2 {
+    font-size: 2rem;
   }
 }
