@@ -434,7 +434,7 @@ a {
 
 .gallery__wrapper .tattoo__list .tattoo__list--item,
 .gallery__wrapper .beauty__list .beauty__list--item {
-  flex-basis: 25%;
+  flex-basis: 20%;
   padding: 0.25em;
 }
 
