@@ -1,20 +1,41 @@
 
 $(function () {
-    const teoreticalPart = $("#teoreticalPart"),
-        practicalPart = $("#practicalPart"),
+    const teoreticalPart_plet = $("#teoreticalPart_plet"),
+        teoreticalPart_try = $("#teoreticalPart_try"),
+        practicalPart_plet = $("#practicalPart_plet"),
+        practicalPart_try = $("#practicalPart_try"),
         services = $(".kurz__list"),
+        kurzPlet = $("#kurz_plet"),
+        kurzTry = $("#kurz_try"),
+        kurzWrapper = $(".kurz_wrapper"),
         btnAno = $(".cookie__btn--ano"),
         btnNe = $(".cookie__btn--ne"),
         cookieBanner = $(".cookie");
 
 
     services.hide(1);
+    kurzWrapper.hide(1);
 
-    teoreticalPart.on("click", function () {
+    kurzPlet.on("click", function () {
+        $(this).next(".kurz_wrapper").slideToggle("slow");
+    });
+
+    kurzTry.on("click", function () {
+        $(this).next(".kurz_wrapper").slideToggle("slow");
+    });
+
+
+    teoreticalPart_plet.on("click", function () {
+        $(this).find(".kurz__list").slideToggle("slow");
+    });
+    teoreticalPart_try.on("click", function () {
         $(this).find(".kurz__list").slideToggle("slow");
     });
 
-    practicalPart.on("click", function () {
+    practicalPart_plet.on("click", function () {
+        $(this).find(".kurz__list").slideToggle("slow");
+    });
+    practicalPart_try.on("click", function () {
         $(this).find(".kurz__list").slideToggle("slow");
     });
 

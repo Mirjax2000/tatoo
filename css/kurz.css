@@ -433,6 +433,25 @@ a {
   letter-spacing: 0;
 }
 
+.indentation {
+  text-indent: 6.3ch;
+}
+
+.kurz .kurz_name {
+  display: block;
+  text-decoration: none;
+}
+.kurz .kurz_name_lower {
+  display: block;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.horizontal {
+  background-color: rgba(255, 217, 0, 0.082);
+  height: 1px;
+  border: none;
+}
+
 /* cookies */
 .cookie {
   position: absolute;
