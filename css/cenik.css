@@ -297,6 +297,33 @@ strong.black {
   color: #141414;
 }
 
+.hover-link:hover {
+  background-color: #4c4c4c;
+  cursor: default;
+  border-radius: 3px;
+  box-shadow: 0 0 1px black;
+}
+
+.padding-start-1em {
+  padding-left: 1em;
+}
+
+.padding-half {
+  padding-top: 0.1em !important;
+  padding-bottom: 0.15em !important;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+.mt-half {
+  margin-top: 0.5em;
+}
+
+.mb-half {
+  margin-bottom: 0.5em;
+}
+
 /* globalni nastaveni fontu */
 h1,
 h2,
@@ -456,9 +483,10 @@ a {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
 }
 
 .section__cenik .cenik__list .service__container {
@@ -481,7 +509,7 @@ a {
   -ms-flex-preferred-size: 30%;
   flex-basis: 30%;
   padding-left: 1em;
-  padding-top: 0.3em;
+  /* padding-top: 0.3em; */
 }
 
 .section__cenik .cenik__list .cenik__list--item .service__list--tetovani li {
