@@ -239,7 +239,6 @@ img {
   );
   -webkit-box-shadow: 1px 1px 4px var(--black-gradient);
   box-shadow: 1px 1px 4px var(--black-gradient);
-  margin-bottom: 10px;
 }
 
 .cenik {
@@ -542,6 +541,7 @@ a {
   background-color: rgba(255, 217, 0, 0.082);
   height: 1px;
   border: none;
+  margin: 0.4em 1em;
 }
 
 /* cookies */
