@@ -297,11 +297,17 @@ strong.black {
   color: #141414;
 }
 
-.hover-link:hover {
+.service.hover-link:hover {
   background-color: #4c4c4c;
   cursor: default;
   border-radius: 3px;
   box-shadow: 0 0 1px black;
+  transition: all 0.1s ease-in-out;
+}
+
+.service.hover-link:hover .res {
+  color: gold;
+  font-weight: 900;
 }
 
 .padding-start-1em {
