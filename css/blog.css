@@ -362,6 +362,13 @@ a {
   margin: 0.4em 1em;
 }
 
+.pb {
+  padding-bottom: 0.3em;
+}
+.ms {
+  margin-left: 0.3em;
+}
+
 /* content */
 .blog .blog__header {
   text-align: center;
