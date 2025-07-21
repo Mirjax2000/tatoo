@@ -413,7 +413,7 @@ a {
 
 .navbar__list--item a {
   padding-inline: 0.5em;
-  margin-inline: 1em;
+  margin-inline: 0.5em;
   -webkit-transition:
     border-bottom 0.25s linear,
     color 0.25s linear;
@@ -693,6 +693,11 @@ a {
 @media (max-width: 450px) {
   :root {
     --font-size: 85%;
+  }
+
+  .navbar__list--item a {
+    padding-inline: 0.2em;
+    margin-inline: 0.2em;
   }
 
   .section__cenik .cenik__list .cenik__list--item .marker__wrapper h2 {
