@@ -672,6 +672,7 @@ a {
   :root {
     --font-size: 85%;
   }
+  
   .navbar__list--item a {
     padding-inline: 0.2em;
     margin-inline: 0.2em;
