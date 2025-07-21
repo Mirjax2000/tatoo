@@ -379,7 +379,7 @@ a {
 .navbar__list--item a,
 .gallery__list--item a {
   padding-inline: 0.5em;
-  margin-inline: 1em;
+  margin-inline: 0.5em;
   transition:
     border-bottom 0.25s linear,
     color 0.25s linear;
@@ -672,5 +672,16 @@ a {
   .gallery__wrapper .tattoo__list .tattoo__list--item,
   .gallery__wrapper .beauty__list .beauty__list--item {
     flex-basis: 33%;
+  }
+}
+
+@media (max-width: 450px) {
+  :root {
+    --font-size: 88%;
+  }
+
+  .navbar__list--item a {
+    padding-inline: 0.2em;
+    margin-inline: 0.2em;
   }
 }
