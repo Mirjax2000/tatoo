@@ -1,7 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "editor.mouseWheelZoom": true,
-    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontSize": 12,
     "editor.fontFamily": "'JetBrains Mono'",
     "editor.fontSize": 20,
     "editor.lineHeight": 1.5,
