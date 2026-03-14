@@ -15,5 +15,11 @@ permanetni rasy:
 - Doplnění po jiné stylistce z `1000` na `1200`
 - sundani ras z `300` na `350`
 
+kosmetika
+
+- zakladni z `800` na `1000`
+- kompletni z `1200` na `1400`
+- cisteni pleti z `1000` na `1200`
+
 - kurz tattoo workshop zvednout cenu na 7500 - `done`
 - kurz pece o plet na 1500 - `done`
