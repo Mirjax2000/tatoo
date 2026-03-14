@@ -226,6 +226,7 @@ img {
 }
 
 .back__gradient {
+  margin-bottom: 10px;
   background: var(--clr-primary);
   background: -o-linear-gradient(
     312deg,
