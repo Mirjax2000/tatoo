@@ -2,7 +2,7 @@
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
-    <title>AK Tatoo &amp; Beauty</title>
+    <title>AK Tattoo &amp; Beauty</title>
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta
       content="Profesionální tetovací a kosmetické služby v našem salonu. Nabízíme širokou nabídku tetování, kosmetiky, péče o řasy, make-upu a vizážistiky. Vytvořte si své jedinečné tetování nebo si dopřejte profesionální kosmetickou péči u nás!"
@@ -41,7 +41,7 @@
       href="./assets/webfonts/Font-face/Corinthia-Regular.woff2"
       rel="preload"
       type="font/woff2"
-      importance="high"
+      fetchpriority="high"
     />
     <link
       as="font"
@@ -102,7 +102,7 @@
         src:
           url("./assets/webfonts/Font-face/OpenSans-Regular.woff2")
             format("woff2"),
-          url("/assets/webfonts/Font-face/OpenSans-Regular.ttf")
+          url("./assets/webfonts/Font-face/OpenSans-Regular.ttf")
             format("truetype");
         font-weight: 400;
         font-style: normal;
@@ -125,17 +125,17 @@
     <noscript>
       <link rel="stylesheet" href="css/main.css" />
     </noscript>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-132KB8NMEL"
+    ></script>
+    <script src="./js/cookies.js"></script>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-132KB8NMEL"
-  ></script>
-  <script src="./js/cookies.js"></script>
 
   <body class="home">
     <main class="container">
-      <nav class="navbar back__gradient">
+      <nav aria-label="Hlavní navigace" class="navbar back__gradient">
         <a href="./index.html" class="navbar__brand"
           >AK&nbsp;&nbsp;Tattoo&nbsp;&nbsp;&amp;&nbsp;Beauty</a
         >

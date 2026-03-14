@@ -452,6 +452,13 @@ a {
   filter: grayscale(25%);
 }
 
+button.switcher {
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  color: var(--clr-font);
+  border: none;
+}
+
 .gallery__wrapper .tattoo__list .tattoo__list--item img:hover,
 .gallery__wrapper .beauty__list .beauty__list--item img:hover {
   box-shadow: 1px 1px 5px black;
@@ -606,6 +613,7 @@ a {
 .cookie__btn--ne:focus {
   color: white;
 }
+
 /* --------------------- */
 
 @media (max-height: 900px) {

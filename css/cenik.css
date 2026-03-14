@@ -309,6 +309,11 @@ strong.black {
   font-weight: 900;
 }
 
+.service.hover-link:hover .note {
+  color: #dddddd;
+  font-weight: 900;
+}
+
 .padding-start-1em {
   padding-left: 1em;
 }
