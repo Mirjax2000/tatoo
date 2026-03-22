@@ -32,6 +32,8 @@
   --container-min: 23rem;
   --font-size: 100%;
   --H1: 2.5rem;
+  --H1-term: 3rem;
+  --H2-term: 2rem;
   --H2: 2.9rem;
   --H3: 1rem;
   --p: 0.87rem;
@@ -406,6 +408,33 @@ a {
 .navbar__list--item a:hover {
   border-bottom: 1px solid var(--clr-detail);
   color: white;
+}
+.terms hr {
+  border: none;
+  height: 1px;
+  opacity: 0.5;
+  background-color: #505050;
+  margin: 1rem 1rem; /* zkrátí čáru o 2rem z obou stran */
+  display: block;
+}
+
+.terms .terms__header .terms__title {
+  font-size: var(--H1-term);
+  line-height: 1;
+}
+.terms .terms__section .terms__section-title {
+  font-size: var(--H2-term);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.terms__footer {
+  margin-bottom: 1rem;
+}
+.terms__footer .terms__contact a {
+  padding: 0 0.5rem;
+  background-color: #1e1e1e;
+  line-height: 1;
+  border-radius: 2px;
 }
 
 .hero__tattoo,
